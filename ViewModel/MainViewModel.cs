@@ -18,8 +18,10 @@ namespace BookStore_WPF.ViewModel
         {
             LoadedWindowCommand = new RelayCommand<object>((p) => { return true; }, (p) => {
                 IsLoaded = true;
-                LoginWindow loginWindow = new LoginWindow();
-                loginWindow.ShowDialog();
+                //LoginWindow loginWindow = new LoginWindow();
+                //loginWindow.ShowDialog();
+                AddBook addBook = new AddBook();
+                addBook.ShowDialog();
             }); 
         }
     }

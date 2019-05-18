@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\My Documents\Exercises\Deadline_3rd\HK2\PTTK\BookStore-WPF\obj\Debug\
+D:\My Documents\Exercises\Deadline_3rd\HK2\PTTK\PTTKPM_16CQ_BookStoreManager\obj\Debug\
 BookStore_WPF
 none
 false
 DEBUG;TRACE
-D:\My Documents\Exercises\Deadline_3rd\HK2\PTTK\BookStore-WPF\App.xaml
-41722984888
+D:\My Documents\Exercises\Deadline_3rd\HK2\PTTK\PTTKPM_16CQ_BookStoreManager\App.xaml
+5-1858905583
 
-14-217435468
-17631409006
-LoginWindow.xaml;MainWindow.xaml;Resource\MainResource.xaml;UserControlZone\ControlBarUC.xaml;
+15-1384719154
+17-1193525074
+AddBook.xaml;LoginWindow.xaml;MainWindow.xaml;Resource\MainResource.xaml;UserControlZone\ControlBarUC.xaml;
 
-True
+False
 
