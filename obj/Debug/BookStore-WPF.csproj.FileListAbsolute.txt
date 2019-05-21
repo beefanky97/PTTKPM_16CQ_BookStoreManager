@@ -60,3 +60,34 @@ D:\My Documents\Exercises\Deadline_3rd\HK2\PTTK\PTTKPM_16CQ_BookStoreManager\obj
 D:\My Documents\Exercises\Deadline_3rd\HK2\PTTK\PTTKPM_16CQ_BookStoreManager\obj\Debug\BookStore-WPF.csproj.CopyComplete
 D:\My Documents\Exercises\Deadline_3rd\HK2\PTTK\PTTKPM_16CQ_BookStoreManager\obj\Debug\BookStore-WPF.exe
 D:\My Documents\Exercises\Deadline_3rd\HK2\PTTK\PTTKPM_16CQ_BookStoreManager\obj\Debug\BookStore-WPF.pdb
+W:\DeadLine\WPF\bin\Debug\BookStore-WPF.exe.config
+W:\DeadLine\WPF\bin\Debug\BookStore-WPF.exe
+W:\DeadLine\WPF\bin\Debug\BookStore-WPF.pdb
+W:\DeadLine\WPF\bin\Debug\MaterialDesignColors.dll
+W:\DeadLine\WPF\bin\Debug\MaterialDesignThemes.Wpf.dll
+W:\DeadLine\WPF\bin\Debug\Microsoft.Expression.Interactions.dll
+W:\DeadLine\WPF\bin\Debug\System.Windows.Interactivity.dll
+W:\DeadLine\WPF\bin\Debug\MaterialDesignThemes.Wpf.pdb
+W:\DeadLine\WPF\bin\Debug\MaterialDesignThemes.Wpf.xml
+W:\DeadLine\WPF\bin\Debug\Microsoft.Expression.Interactions.xml
+W:\DeadLine\WPF\bin\Debug\System.Windows.Interactivity.xml
+W:\DeadLine\WPF\obj\Debug\BookStore-WPF.csprojAssemblyReference.cache
+W:\DeadLine\WPF\obj\Debug\LoginWindow.g.cs
+W:\DeadLine\WPF\obj\Debug\MainWindow.g.cs
+W:\DeadLine\WPF\obj\Debug\UserControlZone\ControlBarUC.g.cs
+W:\DeadLine\WPF\obj\Debug\App.g.cs
+W:\DeadLine\WPF\obj\Debug\GeneratedInternalTypeHelper.g.cs
+W:\DeadLine\WPF\obj\Debug\BookStore-WPF_MarkupCompile.cache
+W:\DeadLine\WPF\obj\Debug\BookStore-WPF_MarkupCompile.lref
+W:\DeadLine\WPF\obj\Debug\App.baml
+W:\DeadLine\WPF\obj\Debug\LoginWindow.baml
+W:\DeadLine\WPF\obj\Debug\MainWindow.baml
+W:\DeadLine\WPF\obj\Debug\Resource\MainResource.baml
+W:\DeadLine\WPF\obj\Debug\UserControlZone\ControlBarUC.baml
+W:\DeadLine\WPF\obj\Debug\BookStore-WPF.g.resources
+W:\DeadLine\WPF\obj\Debug\BookStore_WPF.Properties.Resources.resources
+W:\DeadLine\WPF\obj\Debug\BookStore-WPF.csproj.GenerateResource.cache
+W:\DeadLine\WPF\obj\Debug\BookStore-WPF.csproj.CoreCompileInputs.cache
+W:\DeadLine\WPF\obj\Debug\BookStore-WPF.csproj.CopyComplete
+W:\DeadLine\WPF\obj\Debug\BookStore-WPF.exe
+W:\DeadLine\WPF\obj\Debug\BookStore-WPF.pdb
