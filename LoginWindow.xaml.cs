@@ -55,8 +55,8 @@ namespace BookStore_WPF
             NguoiDungDTO dangnhap = NguoiDungBUS.Login(nguoidung);
             if (dangnhap != null)
             {
-                this.Close();
                 Window mainWindow = new MainWindow();
+                this.Close();
                 mainWindow.Show();
             }
             else

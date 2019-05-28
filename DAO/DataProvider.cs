@@ -11,7 +11,7 @@ namespace DAO
 {
     class DataProvider
     {
-        private static string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=W:\DeadLine\WPF\BookStoreDatabase.mdf;Integrated Security=True;Connect Timeout=30";
+        private static string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=W:\DeadLine\WPF\BookStoreManager\BookStoreDatabase.mdf;Integrated Security=True;Connect Timeout=30";
 
         public static DataTable ExecuteQuerry(string querry)
         {
