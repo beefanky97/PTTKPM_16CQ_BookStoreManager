@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-W:\DeadLine\WPF\obj\Debug\
+W:\DeadLine\WPF\BookStoreManager\obj\Debug\
 BookStore_WPF
 none
 false
 DEBUG;TRACE
-W:\DeadLine\WPF\App.xaml
+W:\DeadLine\WPF\BookStoreManager\App.xaml
 41722984888
 
 10-1030659571
-1726132501
+191003480463
 LoginWindow.xaml;MainWindow.xaml;Resource\MainResource.xaml;UserControlZone\ControlBarUC.xaml;
 
 False

@@ -133,5 +133,15 @@
   <ItemGroup>
     <Resource Include="Image\books-icon.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="BUS\BUS.csproj">
+      <Project>{d0503ebf-11d5-47b3-ae5b-4c3bb3efda08}</Project>
+      <Name>BUS</Name>
+    </ProjectReference>
+    <ProjectReference Include="DTO\DTO.csproj">
+      <Project>{9e5fc019-e5d2-4d5f-9689-1e086716521e}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
