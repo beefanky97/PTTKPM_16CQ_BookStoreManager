@@ -31,6 +31,7 @@
             <RowDefinition Height="auto"></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
+        <Border Grid.Row="1" BorderBrush="White" BorderThickness="2"/>
         <Grid Grid.Row="0">
             <uc:ControlBarUC Tag="{Binding Title, ElementName=mainWindow}"></uc:ControlBarUC>
         </Grid>
@@ -40,15 +41,18 @@
                 <ColumnDefinition Width="65*"></ColumnDefinition>
                 <ColumnDefinition Width="35*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
+            <Border Grid.Column="0" BorderBrush="Black" BorderThickness="0 0 2 0"/>
+            <Border Grid.Column="1" BorderBrush="Black" BorderThickness="2 0 0 0"/>
             <!--Filter and Book Table-->
             <Grid Grid.Column="0">
                 <!--Two Rows-->
                 <Grid.RowDefinitions>
-                    <RowDefinition  Height="50"></RowDefinition>
+                    <RowDefinition  Height="60"></RowDefinition>
                     <RowDefinition></RowDefinition>
                 </Grid.RowDefinitions>
+                <Border Grid.Row="0" BorderBrush="Black" BorderThickness="0 0 0 2"/>
                 <!--Filter-->
-                <Grid Grid.Row="0" Margin="5 2">
+                <Grid Grid.Row="0" VerticalAlignment="Center" Margin="5">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition></ColumnDefinition>
                         <ColumnDefinition Width="150"></ColumnDefinition>
@@ -108,7 +112,7 @@
 
                 <!--Book Table-->
                 <Grid Grid.Row="1">
-                    <DataGrid Background="AliceBlue" Margin="0 8 0 0" ItemsSource="{Binding Items3}"
+                    <DataGrid Background="AliceBlue" Margin="5" ItemsSource="{Binding Items3}"
                                 CanUserSortColumns="True" CanUserAddRows="False"
                                 materialDesign:DataGridAssist.CellPadding="4 2 2 2"
                                 materialDesign:DataGridAssist.ColumnHeaderPadding="4 2 2 2" />
@@ -119,13 +123,17 @@
             <Grid Grid.Column="1">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="80"></RowDefinition>
-                    <RowDefinition Height="50"></RowDefinition>
+                    <RowDefinition Height="60"></RowDefinition>
                     <RowDefinition></RowDefinition>
                     <RowDefinition Height="60"></RowDefinition>
                     <RowDefinition Height="50"></RowDefinition>
                 </Grid.RowDefinitions>
+                <Border Grid.Row="0" BorderBrush="Black" BorderThickness="0 0 0 2"/>
+                <Border Grid.Row="1" BorderBrush="Black" BorderThickness="0 0 0 2"/>
+                <Border Grid.Row="2" BorderBrush="Black" BorderThickness="0 0 0 2"/>
+                <Border Grid.Row="3" BorderBrush="Black" BorderThickness="0 0 0 2"/>
                 <!--Customer Info-->
-                <Grid Grid.Row="0">
+                <Grid Grid.Row="0" VerticalAlignment="Center" Margin="7">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -157,7 +165,7 @@
                             <TextBlock Margin="5" HorizontalAlignment="Center" VerticalAlignment="Bottom">Số lượng</TextBlock>
                         </Grid>
                         <Grid Grid.Row="1">
-                            <Border BorderBrush="Black" BorderThickness="1" Margin="5 0">
+                            <Border BorderBrush="Black" BorderThickness="1" Margin="4">
                                 <TextBox/>
                             </Border>
                         </Grid>
@@ -171,7 +179,7 @@
                             <TextBlock Margin="5" HorizontalAlignment="Center" VerticalAlignment="Bottom">Đơn giá</TextBlock>
                         </Grid>
                         <Grid Grid.Row="1">
-                            <Border BorderBrush="Black" BorderThickness="1" Margin="5 0">
+                            <Border BorderBrush="Black" BorderThickness="1" Margin="4">
                                 <TextBox/>
                             </Border>
                         </Grid>
@@ -184,7 +192,7 @@
                 </Grid>
                 <!--Detail Order-->
                 <Grid Grid.Row="2">
-                    <DataGrid Background="AliceBlue" Margin="0 8 0 0" ItemsSource="{Binding Items3}"
+                    <DataGrid Background="AliceBlue" Margin="5" ItemsSource="{Binding Items3}"
                                 CanUserSortColumns="True" CanUserAddRows="False"
                                 materialDesign:DataGridAssist.CellPadding="4 2 2 2"
                                 materialDesign:DataGridAssist.ColumnHeaderPadding="4 2 2 2" />
