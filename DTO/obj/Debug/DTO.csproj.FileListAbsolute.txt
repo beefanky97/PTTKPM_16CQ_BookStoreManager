@@ -1,0 +1,6 @@
+W:\DeadLine\WPF\BookStoreManager\DTO\bin\Debug\DTO.dll
+W:\DeadLine\WPF\BookStoreManager\DTO\bin\Debug\DTO.pdb
+W:\DeadLine\WPF\BookStoreManager\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+W:\DeadLine\WPF\BookStoreManager\DTO\obj\Debug\DTO.dll
+W:\DeadLine\WPF\BookStoreManager\DTO\obj\Debug\DTO.pdb
+W:\DeadLine\WPF\BookStoreManager\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
