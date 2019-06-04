@@ -20,7 +20,9 @@ namespace BookStore_WPF.ViewModel
                 IsLoaded = true;
                 //LoginWindow loginWindow = new LoginWindow();
                 //loginWindow.ShowDialog();
-                ReportDebtorsWindow addBook = new ReportDebtorsWindow();
+
+                ReceiveMoneyWindow addBook = new ReceiveMoneyWindow();
+
                 addBook.ShowDialog();
             }); 
         }
