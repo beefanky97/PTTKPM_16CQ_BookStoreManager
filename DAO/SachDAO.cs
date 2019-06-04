@@ -13,7 +13,7 @@ namespace DAO
     {
         public static List<SachDTO> GetAllData()
         {
-            string querry = "SELECT * FROM Sach";
+            string querry = "SELECT Sach.Id, Sach.TenSach, Sach.TacGia, TheLoai.TenTheLoai, Sach.DonGia, Sach.LuongTon, TenTheLoai FROM Sach INNER JOIN TheLoai ON TheLoai.Id = Sach.TheLoai";
             DataTable table = DataProvider.ExecuteQuerry(querry);
             if (table.Rows.Count == 0)
             {
@@ -26,7 +26,7 @@ namespace DAO
                 sach.Id = table.Rows[i]["Id"].ToString();
                 sach.TenSach = table.Rows[i]["TenSach"].ToString();
                 sach.TacGia = table.Rows[i]["TacGia"].ToString();
-                sach.TheLoai = table.Rows[i]["TheLoai"].ToString();
+                sach.TenTheLoai = table.Rows[i]["TenTheLoai"].ToString();
                 sach.DonGia = table.Rows[i]["DonGia"].ToString();
                 sach.LuongTon = table.Rows[i]["LuongTon"].ToString();
                 result.Add(sach);

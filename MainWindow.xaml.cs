@@ -25,8 +25,12 @@ namespace BookStore_WPF
         public MainWindow()
         {
             InitializeComponent();
-            List<SachDTO> list = SachBUS.GetAll();
-            dtgBook.ItemsSource = list;
+            List<SachDTO> listSach = SachBUS.GetAll();
+            dtgBook.ItemsSource = listSach;
+            List<TheLoaiDTO> listTheLoai = TheLoaiBUS.GetAllCategories();
+            cbbCategory.ItemsSource = listTheLoai;
+            List<TacGiaDTO> listTacGia = TacGiaBUS.getAllAuthors();
+            cbbAuthor.ItemsSource = listTacGia;
         }
     }
 }

@@ -11,13 +11,13 @@ namespace DTO
         private string id;
         private string tensach;
         private string tacgia;
-        private string theloai;
+        private string tentheloai;
         private string dongia;
         private string luongton;
         public string Id { get => id; set => id = value; }
         public string TenSach { get => tensach; set => tensach = value; }
         public string TacGia { get => tacgia; set => tacgia = value; }
-        public string TheLoai { get => theloai; set => theloai = value; }
+        public string TenTheLoai { get => tentheloai; set => tentheloai = value; }
         public string DonGia { get => dongia; set => dongia = value; }
         public string LuongTon { get => luongton; set => luongton = value; }
     }
