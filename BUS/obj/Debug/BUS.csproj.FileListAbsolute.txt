@@ -9,3 +9,14 @@ W:\DeadLine\WPF\BookStoreManager\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cach
 W:\DeadLine\WPF\BookStoreManager\BUS\obj\Debug\BUS.csproj.CopyComplete
 W:\DeadLine\WPF\BookStoreManager\BUS\obj\Debug\BUS.dll
 W:\DeadLine\WPF\BookStoreManager\BUS\obj\Debug\BUS.pdb
+D:\My Documents\Exercises\Deadline_3rd\HK2\PTTK\PTTKPM_16CQ_BookStoreManager\BUS\bin\Debug\BUS.dll
+D:\My Documents\Exercises\Deadline_3rd\HK2\PTTK\PTTKPM_16CQ_BookStoreManager\BUS\bin\Debug\BUS.pdb
+D:\My Documents\Exercises\Deadline_3rd\HK2\PTTK\PTTKPM_16CQ_BookStoreManager\BUS\bin\Debug\DAO.dll
+D:\My Documents\Exercises\Deadline_3rd\HK2\PTTK\PTTKPM_16CQ_BookStoreManager\BUS\bin\Debug\DTO.dll
+D:\My Documents\Exercises\Deadline_3rd\HK2\PTTK\PTTKPM_16CQ_BookStoreManager\BUS\bin\Debug\DAO.pdb
+D:\My Documents\Exercises\Deadline_3rd\HK2\PTTK\PTTKPM_16CQ_BookStoreManager\BUS\bin\Debug\DTO.pdb
+D:\My Documents\Exercises\Deadline_3rd\HK2\PTTK\PTTKPM_16CQ_BookStoreManager\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
+D:\My Documents\Exercises\Deadline_3rd\HK2\PTTK\PTTKPM_16CQ_BookStoreManager\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+D:\My Documents\Exercises\Deadline_3rd\HK2\PTTK\PTTKPM_16CQ_BookStoreManager\BUS\obj\Debug\BUS.csproj.CopyComplete
+D:\My Documents\Exercises\Deadline_3rd\HK2\PTTK\PTTKPM_16CQ_BookStoreManager\BUS\obj\Debug\BUS.dll
+D:\My Documents\Exercises\Deadline_3rd\HK2\PTTK\PTTKPM_16CQ_BookStoreManager\BUS\obj\Debug\BUS.pdb

@@ -20,6 +20,7 @@
         Title="Báo cáo tồn sách" Height="800" Width="900"
         Name="reportBookWindow">
     <Grid>
+        
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"></RowDefinition>
             <RowDefinition></RowDefinition>
@@ -28,6 +29,7 @@
             <uc:ControlBarUC Tag="{Binding Title, ElementName=reportBookWindow}"></uc:ControlBarUC>
         </Grid>
         <Grid Grid.Row="1">
+            
             <TextBlock HorizontalAlignment="Center" Margin="0 20" Style="{StaticResource MaterialDesignDisplay3TextBlock}">
                    Báo cáo tồn sách
             </TextBlock>

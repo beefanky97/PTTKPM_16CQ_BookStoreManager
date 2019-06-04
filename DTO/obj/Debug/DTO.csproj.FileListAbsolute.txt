@@ -4,3 +4,9 @@ W:\DeadLine\WPF\BookStoreManager\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cach
 W:\DeadLine\WPF\BookStoreManager\DTO\obj\Debug\DTO.dll
 W:\DeadLine\WPF\BookStoreManager\DTO\obj\Debug\DTO.pdb
 W:\DeadLine\WPF\BookStoreManager\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+D:\My Documents\Exercises\Deadline_3rd\HK2\PTTK\PTTKPM_16CQ_BookStoreManager\DTO\bin\Debug\DTO.dll
+D:\My Documents\Exercises\Deadline_3rd\HK2\PTTK\PTTKPM_16CQ_BookStoreManager\DTO\bin\Debug\DTO.pdb
+D:\My Documents\Exercises\Deadline_3rd\HK2\PTTK\PTTKPM_16CQ_BookStoreManager\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
+D:\My Documents\Exercises\Deadline_3rd\HK2\PTTK\PTTKPM_16CQ_BookStoreManager\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\My Documents\Exercises\Deadline_3rd\HK2\PTTK\PTTKPM_16CQ_BookStoreManager\DTO\obj\Debug\DTO.dll
+D:\My Documents\Exercises\Deadline_3rd\HK2\PTTK\PTTKPM_16CQ_BookStoreManager\DTO\obj\Debug\DTO.pdb
