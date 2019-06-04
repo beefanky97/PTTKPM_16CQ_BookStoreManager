@@ -57,11 +57,11 @@ namespace BookStore_WPF
             {
                 Window mainWindow = new MainWindow();
                 this.Close();
-                mainWindow.Show();
+                mainWindow.ShowDialog();
             }
             else
             {
-                MessageBox.Show("Login failed, please check user name or password","Login Error",MessageBoxButton.OK,MessageBoxImage.Stop);
+                txbError.Visibility = Visibility.Visible;
             }
         }
     }

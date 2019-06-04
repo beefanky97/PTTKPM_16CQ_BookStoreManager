@@ -112,7 +112,7 @@
 
                 <!--Book Table-->
                 <Grid Grid.Row="1">
-                    <DataGrid Background="AliceBlue" Margin="5" ItemsSource="{Binding Items3}"
+                    <DataGrid Name="dtgBook" Background="AliceBlue" Margin="5" ItemsSource="{Binding list}"
                                 CanUserSortColumns="True" CanUserAddRows="False"
                                 materialDesign:DataGridAssist.CellPadding="4 2 2 2"
                                 materialDesign:DataGridAssist.ColumnHeaderPadding="4 2 2 2" />

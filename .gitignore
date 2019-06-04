@@ -1,0 +1,9 @@
+.vs
+bin
+obj
+BUS\bin
+BUS\obj
+DAO\bin
+DAO\obj
+DTO\bin
+DTO\obj

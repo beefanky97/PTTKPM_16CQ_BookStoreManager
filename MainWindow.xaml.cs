@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using DTO;
+using BUS;
 
 namespace BookStore_WPF
 {
@@ -24,6 +25,8 @@ namespace BookStore_WPF
         public MainWindow()
         {
             InitializeComponent();
+            List<SachDTO> list = SachBUS.GetAll();
+            dtgBook.ItemsSource = list;
         }
     }
 }

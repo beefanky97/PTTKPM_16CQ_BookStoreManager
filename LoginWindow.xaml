@@ -43,6 +43,7 @@
                     <RadioButton Name="rbWarehouse"  GroupName="UserKind" Content="Warehouse staff"/>
                     <RadioButton Name="rbCasher" GroupName="UserKind" Content="Cashier"/>
                 </StackPanel>
+                <TextBlock Name="txbError" Text="Login failed" Foreground="Red" Visibility="Hidden"/>
             </StackPanel>
         </Grid>
         <Button Name="btnSignIn" Content="Sign in" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,65" Click="BtnSignIn_Click"/>
