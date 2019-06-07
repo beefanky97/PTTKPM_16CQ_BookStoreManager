@@ -73,9 +73,6 @@
                     </StackPanel>
                 </Grid>
             </materialDesign:Card>
-           
         </Grid>
-        
-
     </Grid>
 </Window>
