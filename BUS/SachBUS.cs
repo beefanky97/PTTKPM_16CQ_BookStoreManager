@@ -10,9 +10,8 @@ namespace BUS
 {
     public class SachBUS
     {
-        public static List<SachDTO> GetAll()
-        {
-            return SachDAO.GetAllData();
-        }
+        public static List<SachDTO> GetAll() => SachDAO.GetAllData();
+        public static List<SachDTO> GetBookByAuthor(TacGiaDTO tacgia) => SachDAO.GetBookByAuthor(tacgia);
+        public static List<SachDTO> GetBookByCategory(TheLoaiDTO theloai) => SachDAO.GetBookByCategory(theloai);
     }
 }

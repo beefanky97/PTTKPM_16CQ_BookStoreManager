@@ -72,7 +72,7 @@
                         </TextBox>
                     </Grid>
                     <Grid Grid.Column="1">
-                        <ComboBox Name="cbbCategory" materialDesign:HintAssist.Hint="Thể Loại" IsEditable="True" Style="{StaticResource MaterialDesignFloatingHintComboBox}" Margin="-2,3,10.4,-1.6" Height="45">
+                        <ComboBox Name="cbbCategory" materialDesign:HintAssist.Hint="Thể Loại" IsEditable="True" Style="{StaticResource MaterialDesignFloatingHintComboBox}" Margin="-2,3,10.4,-1.6" Height="45" SelectionChanged="CbbCategory_SelectionChanged">
                             <ComboBox.ItemTemplate>
                                 <DataTemplate>
                                     <TextBlock Text="{Binding TenTheLoai}"/>
@@ -81,7 +81,7 @@
                         </ComboBox>
                     </Grid>
                     <Grid Grid.Column="2">
-                        <ComboBox Name="cbbAuthor" materialDesign:HintAssist.Hint="Tác giả" IsEditable="True" Style="{StaticResource MaterialDesignFloatingHintComboBox}" Height="45" Margin="10,3,10.4,-1.6">
+                        <ComboBox Name="cbbAuthor" materialDesign:HintAssist.Hint="Tác giả" IsEditable="True" Style="{StaticResource MaterialDesignFloatingHintComboBox}" Height="45" Margin="10,3,10.4,-1.6" SelectionChanged="CbbAuthor_SelectionChanged">
                             <ComboBox.ItemTemplate>
                                 <DataTemplate>
                                     <TextBlock Text="{Binding TenTacGia}"/>
