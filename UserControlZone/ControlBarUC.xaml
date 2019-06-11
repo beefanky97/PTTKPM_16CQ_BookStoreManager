@@ -7,7 +7,8 @@
              xmlns:local="clr-namespace:BookStore_WPF.UserControlZone"
              xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
              Name="ucControlBar"
-             mc:Ignorable="d" >
+             mc:Ignorable="d" 
+             Height="36">
 
     <i:Interaction.Triggers>
         <i:EventTrigger EventName="MouseLeftButtonDown">
@@ -41,13 +42,20 @@
                     <Button ToolTip="Đóng ứng dụng"
                             Command="{Binding CloseWindowCommand}"
                             CommandParameter="{Binding ElementName=ucControlBar}"
-                            Background="Transparent"> 
+                            Background="Transparent">
                         <materialDesign:PackIcon  Kind="ExitToApp"/>
                     </Button>
                 </StackPanel>
-                
+
                 <StackPanel DockPanel.Dock="Left" Orientation="Horizontal">
-                    <ToggleButton Style="{DynamicResource MaterialDesignHamburgerToggleButton}" />
+                    <StackPanel Orientation="Vertical">
+                        <ToggleButton Name="btnMenu"  Style="{DynamicResource MaterialDesignHamburgerToggleButton}" Checked="btnMenu_Checked" />
+                        <StackPanel Name="pnlMenu"  Background="White">
+                            <Button Content="xxx"/>
+                            <Button Content="xxx"/>
+                            <Button Content="xxx"/>
+                        </StackPanel>
+                    </StackPanel>
                     <TextBlock VerticalAlignment="Center" Margin="16 0 0 0" Width="800" Text="{Binding Tag, ElementName=ucControlBar}">
                     </TextBlock>
                 </StackPanel>

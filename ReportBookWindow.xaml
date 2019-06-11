@@ -29,11 +29,19 @@
             <uc:ControlBarUC Tag="{Binding Title, ElementName=reportBookWindow}"></uc:ControlBarUC>
         </Grid>
         <Grid Grid.Row="1">
-
+            <Rectangle Height="500" VerticalAlignment="Top">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF2281D1"/>
+                        <GradientStop Color="#FF34268A" Offset="1"/>
+                        <GradientStop Color="#FF33288B" Offset="0.546"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
             <TextBlock HorizontalAlignment="Center" Margin="0 20" Style="{StaticResource MaterialDesignDisplay3TextBlock}">
                    Báo cáo tồn sách
             </TextBlock>
-            <materialDesign:Card  Width="800" Height="550" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <materialDesign:Card UniformCornerRadius="10"  Width="800" Height="550" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Grid>
                     <DataGrid Background="AliceBlue" ItemsSource="{Binding Items3}" CanUserSortColumns="True"
                         CanUserAddRows="False"

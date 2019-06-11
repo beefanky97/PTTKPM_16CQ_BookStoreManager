@@ -29,5 +29,12 @@ namespace BookStore_WPF.UserControlZone
 
 
         }
+
+        private void btnMenu_Checked(object sender, RoutedEventArgs e)
+        {
+            pnlMenu.Visibility = Visibility.Visible;
+            MessageBox.Show("HI!");
+        }
+
     }
 }

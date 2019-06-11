@@ -1,0 +1,6 @@
+D:\My Documents\Exercises\Deadline_3rd\HK2\PTTK\PTTKPM_16CQ_BookStoreManager\DTO\bin\Debug\DTO.dll
+D:\My Documents\Exercises\Deadline_3rd\HK2\PTTK\PTTKPM_16CQ_BookStoreManager\DTO\bin\Debug\DTO.pdb
+D:\My Documents\Exercises\Deadline_3rd\HK2\PTTK\PTTKPM_16CQ_BookStoreManager\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
+D:\My Documents\Exercises\Deadline_3rd\HK2\PTTK\PTTKPM_16CQ_BookStoreManager\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\My Documents\Exercises\Deadline_3rd\HK2\PTTK\PTTKPM_16CQ_BookStoreManager\DTO\obj\Debug\DTO.dll
+D:\My Documents\Exercises\Deadline_3rd\HK2\PTTK\PTTKPM_16CQ_BookStoreManager\DTO\obj\Debug\DTO.pdb

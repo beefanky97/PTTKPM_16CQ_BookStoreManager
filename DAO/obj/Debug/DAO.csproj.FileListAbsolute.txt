@@ -1,0 +1,9 @@
+D:\My Documents\Exercises\Deadline_3rd\HK2\PTTK\PTTKPM_16CQ_BookStoreManager\DAO\bin\Debug\DAO.dll
+D:\My Documents\Exercises\Deadline_3rd\HK2\PTTK\PTTKPM_16CQ_BookStoreManager\DAO\bin\Debug\DAO.pdb
+D:\My Documents\Exercises\Deadline_3rd\HK2\PTTK\PTTKPM_16CQ_BookStoreManager\DAO\bin\Debug\DTO.dll
+D:\My Documents\Exercises\Deadline_3rd\HK2\PTTK\PTTKPM_16CQ_BookStoreManager\DAO\bin\Debug\DTO.pdb
+D:\My Documents\Exercises\Deadline_3rd\HK2\PTTK\PTTKPM_16CQ_BookStoreManager\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+D:\My Documents\Exercises\Deadline_3rd\HK2\PTTK\PTTKPM_16CQ_BookStoreManager\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+D:\My Documents\Exercises\Deadline_3rd\HK2\PTTK\PTTKPM_16CQ_BookStoreManager\DAO\obj\Debug\DAO.csproj.CopyComplete
+D:\My Documents\Exercises\Deadline_3rd\HK2\PTTK\PTTKPM_16CQ_BookStoreManager\DAO\obj\Debug\DAO.dll
+D:\My Documents\Exercises\Deadline_3rd\HK2\PTTK\PTTKPM_16CQ_BookStoreManager\DAO\obj\Debug\DAO.pdb
