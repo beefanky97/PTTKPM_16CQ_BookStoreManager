@@ -72,35 +72,21 @@
                         </TextBox>
                     </Grid>
                     <Grid Grid.Column="1">
-                        <ComboBox materialDesign:HintAssist.Hint="Thể Loại" IsEditable="True" Style="{StaticResource MaterialDesignFloatingHintComboBox}" Margin="-2,3,10.4,-1.6" Height="45">
-                            <ComboBoxItem IsSelected="True">
-                                Truyện tranh
-                            </ComboBoxItem>
-                            <ComboBoxItem>
-                                Tiểu thuyết
-                            </ComboBoxItem>
-                            <ComboBoxItem>
-                                Sách giáo khoa
-                            </ComboBoxItem>
-                            <ComboBoxItem IsSelected="True">
-                                Tất cả
-                            </ComboBoxItem>
+                        <ComboBox Name="cbbCategory" materialDesign:HintAssist.Hint="Thể Loại" IsEditable="True" Style="{StaticResource MaterialDesignFloatingHintComboBox}" Margin="-2,3,10.4,-1.6" Height="45" SelectionChanged="CbbCategory_SelectionChanged">
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding TenTheLoai}"/>
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
                         </ComboBox>
                     </Grid>
                     <Grid Grid.Column="2">
-                        <ComboBox materialDesign:HintAssist.Hint="Tác giả" IsEditable="True" Style="{StaticResource MaterialDesignFloatingHintComboBox}" Height="45" Margin="10,3,10.4,-1.6">
-                            <ComboBoxItem >
-                                Nguyễn Nhật Ánh
-                            </ComboBoxItem>
-                            <ComboBoxItem>
-                                Nam Cao
-                            </ComboBoxItem>
-                            <ComboBoxItem>
-                                Bộ GD và ĐT
-                            </ComboBoxItem>
-                            <ComboBoxItem IsSelected="True">
-                                Tất cả
-                            </ComboBoxItem>
+                        <ComboBox Name="cbbAuthor" materialDesign:HintAssist.Hint="Tác giả" IsEditable="True" Style="{StaticResource MaterialDesignFloatingHintComboBox}" Height="45" Margin="10,3,10.4,-1.6" SelectionChanged="CbbAuthor_SelectionChanged">
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding TenTacGia}"/>
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
                         </ComboBox>
                     </Grid>
                     <Grid Grid.Column="3">
@@ -112,7 +98,7 @@
 
                 <!--Book Table-->
                 <Grid Grid.Row="1">
-                    <DataGrid Background="AliceBlue" Margin="5" ItemsSource="{Binding Items3}"
+                    <DataGrid Name="dtgBook" Background="AliceBlue" Margin="5" ItemsSource="{Binding list}"
                                 CanUserSortColumns="True" CanUserAddRows="False"
                                 materialDesign:DataGridAssist.CellPadding="4 2 2 2"
                                 materialDesign:DataGridAssist.ColumnHeaderPadding="4 2 2 2" />

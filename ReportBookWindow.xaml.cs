@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using BUS;
+using DTO;
 
 namespace BookStore_WPF
 {
@@ -22,6 +24,15 @@ namespace BookStore_WPF
         public ReportBookWindow()
         {
             InitializeComponent();
+            List<BaoCaoSachTonDTO> list = BaoCaoSachTonBUS.GetAllData();
+            dtgBookReportList.ItemsSource = list;
+        }
+
+        private void DtgBookReportList_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            BaoCaoSachTonDTO selected = (BaoCaoSachTonDTO)dtgBookReportList.SelectedItem;
+            Window reportDetail = new ReportBookDetail(selected);
+            reportDetail.ShowDialog();
         }
     }
 }

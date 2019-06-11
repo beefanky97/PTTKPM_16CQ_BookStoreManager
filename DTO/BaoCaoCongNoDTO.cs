@@ -10,7 +10,15 @@ namespace DTO
     {
         private string id;
         private string ngaylap;
+        private string idno;
+        private string nodau;
+        private string nocuoi;
+        private string phatsinh;
         public string Id { get => id; set => id = value; }
         public string NgayLap { get => ngaylap; set => ngaylap = value; }
+        public string IdNo { get => idno; set => idno = value; }
+        public string NoDau { get => nodau; set => nodau = value; }
+        public string NoCuoi { get => nocuoi; set => nocuoi = value; }
+        public string PhatSing { get => phatsinh; set => phatsinh = value; }
     }
 }

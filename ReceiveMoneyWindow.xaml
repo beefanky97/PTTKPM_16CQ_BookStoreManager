@@ -28,19 +28,10 @@
             <uc:ControlBarUC Tag="{Binding Title, ElementName=receiveMoneyWindow}"></uc:ControlBarUC>
         </Grid>
         <Grid Grid.Row="1">
-            <Rectangle Height="300" VerticalAlignment="Top">
-                <Rectangle.Fill>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#FF2281D1"/>
-                        <GradientStop Color="#FF34268A" Offset="1"/>
-                        <GradientStop Color="#FF33288B" Offset="0.546"/>
-                    </LinearGradientBrush>
-                </Rectangle.Fill>
-            </Rectangle>
-            <TextBlock HorizontalAlignment="Center" Margin="0 20" Style="{StaticResource MaterialDesignDisplay3TextBlock}" >
+            <TextBlock HorizontalAlignment="Center" Margin="0 20" Style="{StaticResource MaterialDesignDisplay3TextBlock}">
                    Phiếu thu tiền
             </TextBlock>
-            <materialDesign:Card UniformCornerRadius="10" Margin="50" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <materialDesign:Card Margin="50" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition></ColumnDefinition>
@@ -71,7 +62,7 @@
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" Margin="15">
                             <materialDesign:PackIcon Kind="EmailVariant" />
-                            <TextBox Width="350" materialDesign:HintAssist.Hint="Email" Style="{StaticResource MaterialDesignFloatingHintTextBox}" TextChanged="TextBox_TextChanged" />
+                            <TextBox Width="350" materialDesign:HintAssist.Hint="Email" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" Margin="15">
                             <materialDesign:PackIcon Kind="Coin" />
@@ -82,9 +73,6 @@
                     </StackPanel>
                 </Grid>
             </materialDesign:Card>
-           
         </Grid>
-        
-
     </Grid>
 </Window>

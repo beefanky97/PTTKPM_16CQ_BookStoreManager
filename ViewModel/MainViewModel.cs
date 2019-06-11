@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +20,7 @@ namespace BookStore_WPF.ViewModel
                 IsLoaded = true;
                 //LoginWindow loginWindow = new LoginWindow();
                 //loginWindow.ShowDialog();
-
-                ReceiveMoneyWindow addBook = new ReceiveMoneyWindow();
-
+                ReportBookWindow addBook = new ReportBookWindow();
                 addBook.ShowDialog();
             }); 
         }

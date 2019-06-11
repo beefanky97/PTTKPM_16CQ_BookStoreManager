@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using DTO;
+using BUS;
 
 namespace BookStore_WPF
 {
@@ -24,6 +25,28 @@ namespace BookStore_WPF
         public MainWindow()
         {
             InitializeComponent();
+            List<SachDTO> listSach = SachBUS.GetAll();
+            dtgBook.ItemsSource = listSach;
+            List<TheLoaiDTO> listTheLoai = TheLoaiBUS.GetAllCategories();
+            cbbCategory.ItemsSource = listTheLoai;
+            List<TacGiaDTO> listTacGia = TacGiaBUS.getAllAuthors();
+            cbbAuthor.ItemsSource = listTacGia;
+        }
+
+        private void CbbCategory_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            TheLoaiDTO selected = (TheLoaiDTO)cbbCategory.SelectedItem;
+            List<SachDTO> list = SachBUS.GetBookByCategory(selected);
+            dtgBook.ItemsSource = list;
+            dtgBook.Items.Refresh();
+        }
+
+        private void CbbAuthor_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            TacGiaDTO selected = (TacGiaDTO)cbbAuthor.SelectedItem;
+            List<SachDTO> list = SachBUS.GetBookByAuthor(selected);
+            dtgBook.ItemsSource = list;
+            dtgBook.Items.Refresh();
         }
     }
 }
