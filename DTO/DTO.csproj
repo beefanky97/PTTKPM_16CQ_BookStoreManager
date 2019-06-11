@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaoCaoCongNoDTO.cs" />
+    <Compile Include="BaoCaoSachTonDTO.cs" />
     <Compile Include="CongNoDTO.cs" />
     <Compile Include="NguoiDungDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

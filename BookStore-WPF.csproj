@@ -75,6 +75,9 @@
     <Compile Include="ReceiveMoneyWindow.xaml.cs">
       <DependentUpon>ReceiveMoneyWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ReportBookDetail.xaml.cs">
+      <DependentUpon>ReportBookDetail.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ReportBookWindow.xaml.cs">
       <DependentUpon>ReportBookWindow.xaml</DependentUpon>
     </Compile>
@@ -108,6 +111,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="ReceiveMoneyWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ReportBookDetail.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
