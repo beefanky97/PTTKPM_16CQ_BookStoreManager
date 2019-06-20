@@ -1,0 +1,48 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using DTO;
+using DAO;
+
+namespace BUS
+{
+    public class KhachHangBUS
+    {
+        public static int addCustomer(KhachHangDTO customer)
+        {
+            int result = 0;
+            if (customer.CongNo == null)
+            {
+                result = KhachHangDAO.addCustomer(customer);
+            }
+            else
+            {
+                result = KhachHangDAO.addCustomer(customer);
+                result = CongNoDAO.AddDeb(customer.CongNo);
+            }
+            return result;
+        }
+        public static int checkDeb(string Name, string Phone)
+        {
+            KhachHangDTO customer = KhachHangDAO.getCustomer(Name, Phone);
+            if (customer == null)
+            {
+                return 0;
+            }
+            else
+            {
+                int nodau = int.Parse(customer.CongNo.NoDau);
+                if (nodau < 20000)
+                {
+                    return 2;
+                }
+                else
+                {
+                    return 1;
+                }
+            }
+        }
+    }
+}
