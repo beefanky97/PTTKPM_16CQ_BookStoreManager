@@ -50,8 +50,8 @@
                 </Grid>
             </materialDesign:Card>
             <StackPanel  Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Center">
-                <Button Background="MediumPurple" Margin="10 40" Width="150" Height="40">In và lưu</Button>
-                <Button Background="LightGreen" Margin="10" Width="150" Height="40">Huỷ</Button>
+                <Button Name="btnAdd" Background="MediumPurple" Margin="10 40" Width="150" Height="40" Click="BtnAdd_Click">Tạo báo cáo</Button>
+                <Button Name="btnCancel" Background="LightGreen" Margin="10" Width="150" Height="40" Click="BtnCancel_Click">Huỷ</Button>
             </StackPanel>
 
         </Grid>
