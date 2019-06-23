@@ -20,7 +20,7 @@
      Background="{DynamicResource MaterialDesignPaper}"
      FontFamily="{DynamicResource MaterialDesignFont}"
         DataContext="{StaticResource MainVM}"
-        Title="Chỉnh sửa qui định" Height="800" Width="900"
+        Title="Chỉnh sửa qui định" Height="800" Width="1000"
         Name="editRegulations">
 
     <i:Interaction.Triggers>

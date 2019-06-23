@@ -28,13 +28,7 @@ namespace BookStore_WPF.UserControlZone
             this.DataContext = ViewModel = new ControlBarViewModel();
 
 
-        }
-
-        private void btnMenu_Checked(object sender, RoutedEventArgs e)
-        {
-            pnlMenu.Visibility = Visibility.Visible;
-            MessageBox.Show("HI!");
-        }
+        }}
 
     }
 }
