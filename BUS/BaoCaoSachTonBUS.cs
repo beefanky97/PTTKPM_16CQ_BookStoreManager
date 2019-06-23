@@ -11,5 +11,6 @@ namespace BUS
     public class BaoCaoSachTonBUS
     {
         public static List<BaoCaoSachTonDTO> GetAllData() => BaoCaoSachTonDAO.GetAllData();
+        public static int GenerateReport() => BaoCaoSachTonDAO.GenerateReport();
     }
 }

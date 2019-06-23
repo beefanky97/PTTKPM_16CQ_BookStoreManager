@@ -41,32 +41,33 @@
                     <StackPanel Margin="30 10 10 10" Grid.Column="0" Orientation="Vertical" VerticalAlignment="Center">
                         <StackPanel Orientation="Horizontal" Margin="15">
                             <materialDesign:PackIcon Kind="Account" />
-                            <TextBox Width="350" materialDesign:HintAssist.Hint="Họ và tên" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                            <TextBox Name="txtName" Width="350" materialDesign:HintAssist.Hint="Họ và tên" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" Margin="15">
                             <materialDesign:PackIcon Kind="CameraFrontVariant" />
-                            <TextBox Width="350" materialDesign:HintAssist.Hint="Điện thoại" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                            <TextBox Name="txtPhone" Width="350" materialDesign:HintAssist.Hint="Điện thoại" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" Margin="15">
                             <materialDesign:PackIcon Kind="DateRange" />
-                            <TextBox Width="350" materialDesign:HintAssist.Hint="Ngày thu tiền" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                            <!--<TextBox Name="txt" Width="350" materialDesign:HintAssist.Hint="Ngày thu tiền" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />-->
+                            <DatePicker Name="dpCashDay" Width="350" materialDesign:HintAssist.Hint="Pick Date" Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
                         </StackPanel>
-                        <Button Background="MediumPurple" Margin="10" HorizontalAlignment="Right" Width="150" Height="40">In và lưu</Button>
+                        <Button Name="btnSave" Background="MediumPurple" Margin="10" HorizontalAlignment="Right" Width="150" Height="40" Click="BtnSave_Click">In và lưu</Button>
                     </StackPanel>
 
                     <!--Column 1-->
                     <StackPanel Margin="60 10 10 10" Grid.Column="1" Orientation="Vertical" VerticalAlignment="Center">
                         <StackPanel Orientation="Horizontal" Margin="15">
                             <materialDesign:PackIcon Kind="MapMarkerRadius" />
-                            <TextBox Width="350" materialDesign:HintAssist.Hint="Địa chỉ" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                            <TextBox Name="txtAddress" Width="350" materialDesign:HintAssist.Hint="Địa chỉ" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" Margin="15">
                             <materialDesign:PackIcon Kind="EmailVariant" />
-                            <TextBox Width="350" materialDesign:HintAssist.Hint="Email" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                            <TextBox Name="txtEmail" Width="350" materialDesign:HintAssist.Hint="Email" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" Margin="15">
                             <materialDesign:PackIcon Kind="Coin" />
-                            <TextBox Width="350" materialDesign:HintAssist.Hint="Số tiền thu" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                            <TextBox Name="txtMoney" Width="350" materialDesign:HintAssist.Hint="Số tiền thu" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
                         </StackPanel>
                         <Button Background="LightGreen" HorizontalAlignment="Left" Margin="10" Width="150" Height="40">Huỷ</Button>
 

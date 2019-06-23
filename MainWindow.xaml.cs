@@ -22,6 +22,8 @@ namespace BookStore_WPF
     /// </summary>
     public partial class MainWindow : Window
     {
+        private List<SachDTO> selectedBooks = new List<SachDTO>();
+        private int total = 0;
         public MainWindow()
         {
             InitializeComponent();
@@ -31,6 +33,7 @@ namespace BookStore_WPF
             cbbCategory.ItemsSource = listTheLoai;
             List<TacGiaDTO> listTacGia = TacGiaBUS.getAllAuthors();
             cbbAuthor.ItemsSource = listTacGia;
+            lblDate.Content = DateTime.Now.Date.ToString();
         }
 
         private void CbbCategory_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -47,6 +50,41 @@ namespace BookStore_WPF
             List<SachDTO> list = SachBUS.GetBookByAuthor(selected);
             dtgBook.ItemsSource = list;
             dtgBook.Items.Refresh();
+        }
+
+        private void BtnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                SachDTO selected = (SachDTO)dtgBook.SelectedItem;
+                int amount = int.Parse(txtAmount.Text);
+                txtPrice.Text = selected.DonGia;
+                int price = int.Parse(txtPrice.Text);
+                SachDTO item = selected;
+                item.LuongTon = txtAmount.Text;
+                selectedBooks.Add(item);
+                dtgSelectedItem.ItemsSource = selectedBooks;
+                dtgSelectedItem.Items.Refresh();
+                total = total + amount * price;
+                lblTotalCost.Content = total.ToString();
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Asterisk);
+            }
+        }
+
+        private void BtnSave_Click(object sender, RoutedEventArgs e)
+        {
+            HoaDonDTO bill = new HoaDonDTO();
+            KhachHangDTO customer = new KhachHangDTO();
+            customer.TenKH = txtName.Text;
+            customer.SDT = txtPhone.Text;
+            bill.Ngay = DateTime.Now.Date.ToString();
+            bill.ThanhTien = total.ToString();
+            bill.Sach = selectedBooks;
+            Window receiveMoney = new ReceiveMoneyWindow(bill, customer);
+            receiveMoney.ShowDialog();
         }
     }
 }

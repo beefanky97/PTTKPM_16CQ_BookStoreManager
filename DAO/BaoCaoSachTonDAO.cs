@@ -51,5 +51,32 @@ namespace DAO
             }
             return result;
         }
+
+        public static int GenerateReport()
+        {
+            int amount = 0;
+            List<SachDTO> listOfCurrentBook = SachDAO.GetAllData();
+            foreach(SachDTO item in listOfCurrentBook)
+            {
+                int number = int.Parse(item.LuongTon);
+                amount += number;
+            }
+            string querry = @"INSERT INTO BaoCaoSachTon(NgayLap, SoLuong) VALUES ('" + DateTime.Now.Date + "'," + amount.ToString() + ")";
+            int result = DataProvider.ExecuteNonQuerry(querry);
+            querry = @"SELECT IDENT_CURRENT('BaoCaoSachTon') AS Id";
+            string id = DataProvider.ExecuteQuerry(querry).Rows[0]["Id"].ToString();
+            if (result == 0)
+            {
+                return 0;
+            } else
+            {
+                foreach(SachDTO item in listOfCurrentBook)
+                {
+                    querry = @"INSERT INTO Sach_BaoCao(Sach, BaoCao) VALUES (" + item.Id + "," + id + ")";
+                    result = DataProvider.ExecuteNonQuerry(querry);
+                }
+            }
+            return result;
+        }
     }
 }

@@ -24,6 +24,7 @@ namespace BookStore_WPF
         public ReportBookWindow()
         {
             InitializeComponent();
+            //int result = BaoCaoSachTonBUS.GenerateReport();
             List<BaoCaoSachTonDTO> list = BaoCaoSachTonBUS.GetAllData();
             dtgBookReportList.ItemsSource = list;
         }
@@ -33,6 +34,19 @@ namespace BookStore_WPF
             BaoCaoSachTonDTO selected = (BaoCaoSachTonDTO)dtgBookReportList.SelectedItem;
             Window reportDetail = new ReportBookDetail(selected);
             reportDetail.ShowDialog();
+        }
+
+        private void BtnCancel_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void BtnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            int result = BaoCaoSachTonBUS.GenerateReport();
+            List<BaoCaoSachTonDTO> list = BaoCaoSachTonBUS.GetAllData();
+            dtgBookReportList.ItemsSource = list;
+            dtgBookReportList.Items.Refresh();
         }
     }
 }
