@@ -36,33 +36,33 @@ namespace BookStore_WPF
             NguoiDungDTO nguoidung = new NguoiDungDTO();
             nguoidung.TenDangNhap = txtUsername.Text;
             nguoidung.MatKhau = pswPassword.Password;
-            if (rbCasher.IsChecked == false && rbManager.IsChecked == false && rbWarehouse.IsChecked == false)
-            {
-                MessageBox.Show("Please select the type of user", "Notification", MessageBoxButton.OK, MessageBoxImage.Asterisk);
-            }
-            if (rbCasher.IsChecked == true)
-            {
-                nguoidung.NhanVienBanHang = "1";
-            }
-            if (rbManager.IsChecked == true)
-            {
-                nguoidung.QuanLi = "1";
-            }
-            if (rbWarehouse.IsChecked == true)
-            {
-                nguoidung.NhanVienNhapKho = "1";
-            }
-            NguoiDungDTO dangnhap = NguoiDungBUS.Login(nguoidung);
-            if (dangnhap != null)
-            {
-                Window mainWindow = new MainWindow();
-                this.Close();
+            //if (rbCasher.IsChecked == false && rbManager.IsChecked == false && rbWarehouse.IsChecked == false)
+            //{
+            //    MessageBox.Show("Please select the type of user", "Notification", MessageBoxButton.OK, MessageBoxImage.Asterisk);
+            //}
+            //if (rbCasher.IsChecked == true)
+            //{
+            //    nguoidung.NhanVienBanHang = "1";
+            //}
+            //if (rbManager.IsChecked == true)
+            //{
+            //    nguoidung.QuanLi = "1";
+            //}
+            //if (rbWarehouse.IsChecked == true)
+            //{
+            //    nguoidung.NhanVienNhapKho = "1";
+            //}
+            //NguoiDungDTO dangnhap = NguoiDungBUS.Login(nguoidung);
+            //if (dangnhap != null)
+            //{
+                MainWindow mainWindow = new MainWindow();
+                //this.Close();
                 mainWindow.ShowDialog();
-            }
-            else
-            {
-                txbError.Visibility = Visibility.Visible;
-            }
+            //}
+            //else
+            //{
+            //    txbError.Visibility = Visibility.Visible;
+            //}
         }
     }
 }

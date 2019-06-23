@@ -69,6 +69,9 @@
     <Compile Include="AddBook.xaml.cs">
       <DependentUpon>AddBook.xaml</DependentUpon>
     </Compile>
+    <Compile Include="EditRegulationsWindow.xaml.cs">
+      <DependentUpon>EditRegulationsWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="LoginWindow.xaml.cs">
       <DependentUpon>LoginWindow.xaml</DependentUpon>
     </Compile>
@@ -92,6 +95,10 @@
     <Compile Include="ViewModel\ControlBarViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Page Include="AddBook.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EditRegulationsWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
