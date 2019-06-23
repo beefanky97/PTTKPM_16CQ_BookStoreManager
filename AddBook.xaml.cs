@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using BUS;
+using DTO;
 
 namespace BookStore_WPF
 {
@@ -22,6 +24,10 @@ namespace BookStore_WPF
         public AddBook()
         {
             InitializeComponent();
+            List<TacGiaDTO> listAuthor = TacGiaBUS.getAllAuthors();
+            List<TheLoaiDTO> listCategory = TheLoaiBUS.GetAllCategories();
+            cbbAuthor.ItemsSource = listAuthor;
+            cbbCategory.ItemsSource = listCategory;
         }
     }
 }
