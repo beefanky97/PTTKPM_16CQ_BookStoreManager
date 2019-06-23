@@ -78,5 +78,19 @@ namespace DAO
             }
             return result;
         }
+
+        public static int addBook(SachDTO book)
+        {
+            string querry = @"INSERT INTO dbo.Sach(TenSach,TacGia,TheLoai,DonGia,LuongTon) VALUES (N'" + book.TenSach + "', " + book.TenTacGia + "," + book.TenTheLoai + "," + book.DonGia + "," + book.LuongTon + ")";
+            int result = DataProvider.ExecuteNonQuerry(querry);
+            return result;
+        }
+
+        public static int changeAmount(SachDTO book)
+        {
+            string querry = @"UPDATE Sach SET LuongTon = " + book.LuongTon + " WHERE Id = " + book.Id;
+            int result = DataProvider.ExecuteNonQuerry(querry);
+            return result;
+        }
     }
 }

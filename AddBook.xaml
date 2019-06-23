@@ -61,11 +61,11 @@
                         <StackPanel Margin="100 10 10 10" Grid.Row="1" Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center">
                             <materialDesign:PackIcon Kind="CurrencyUsd" />
                             <Label>Tổng tiền:</Label>
-                            <TextBlock></TextBlock>
+                            <TextBlock Name="lblTotal"></TextBlock>
                         </StackPanel>
                         <StackPanel Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" Orientation="Horizontal" HorizontalAlignment="Center">
-                            <Button Background="MediumPurple" Margin="10" Width="150" Height="40">In và lưu</Button>
-                            <Button Background="LightGreen" Margin="10" Width="150" Height="40">Huỷ</Button>
+                            <!--<Button Background="MediumPurple" Margin="10" Width="150" Height="40">In và lưu</Button>-->
+                            <Button Name="btnCancel" Background="LightGreen" Margin="10" Width="150" Height="40" Click="BtnCancel_Click">Huỷ</Button>
                         </StackPanel>
                     </Grid>
                     <Grid Grid.Row="1">
@@ -77,41 +77,31 @@
                         <StackPanel Orientation="Vertical" Grid.Column="0"  VerticalAlignment="Center" Margin="10,24,26,23.2">
                             <Label  VerticalAlignment="Bottom" HorizontalAlignment="Left">Thông tin sách nhập</Label>
                             <TextBox Name="txtName" Margin="20 0 0 0" materialDesign:HintAssist.Hint="Tên sách" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-                            <!--<TextBox Margin="20 0 0 0" materialDesign:HintAssist.Hint="Thể loại" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />-->
-                            <ComboBox Name="cbbCategory" Margin="20 0 0 0" materialDesign:HintAssist.Hint="Thể Loại" IsEditable="True" Style="{StaticResource MaterialDesignFloatingHintComboBox}">
-                                <ComboBox.ItemTemplate>
-                                    <DataTemplate>
-                                        <TextBlock Text="{Binding TenTheLoai}"/>
-                                    </DataTemplate>
-                                </ComboBox.ItemTemplate>
-                            </ComboBox>
-                            <!--<TextBox Margin="20 0 0 0" materialDesign:HintAssist.Hint="Tác giả" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />-->
-                            <ComboBox Name="cbbAuthor" Margin="20 0 0 0" materialDesign:HintAssist.Hint="Tác giả" IsEditable="True" Style="{StaticResource MaterialDesignFloatingHintComboBox}">
-                                <ComboBox.ItemTemplate>
-                                    <DataTemplate>
-                                        <TextBlock Text="{Binding TenTheLoai}"/>
-                                    </DataTemplate>
-                                </ComboBox.ItemTemplate>
-                            </ComboBox>
+                            <TextBox Name="txtCategory" Margin="20 0 0 0" materialDesign:HintAssist.Hint="Thể loại" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                            <TextBox Name="txtAuthor" Margin="20 0 0 0" materialDesign:HintAssist.Hint="Tác giả" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
                         </StackPanel>
                         <StackPanel Orientation="Vertical" Grid.Column="1"  VerticalAlignment="Center" Margin="10,0,0,0.2" Grid.ColumnSpan="2">
-                            <TextBox Margin="0 50 0 0" materialDesign:HintAssist.Hint="Số lượng" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-                            <TextBox materialDesign:HintAssist.Hint="Đơn giá" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                            <TextBox Name="txtAmount" Margin="0 50 0 0" materialDesign:HintAssist.Hint="Số lượng" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                            <TextBox Name="txtPrice" materialDesign:HintAssist.Hint="Đơn giá" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                                <Button Margin="10" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" ToolTip="MaterialDesignFloatingActionMiniAccentButton">
+                                <Button Name="btnAdd" Margin="10" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" ToolTip="MaterialDesignFloatingActionMiniAccentButton" Click="BtnAdd_Click">
                                     <materialDesign:PackIcon Kind="Add" Width="30" Height="30"/>
                                 </Button>
-                                <Button Margin="10 10 100 10" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="MaterialDesignFloatingActionMiniAccentButton">
+                                <Button Name="btnReset" Margin="10 10 100 10" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="MaterialDesignFloatingActionMiniAccentButton" Click="BtnReset_Click">
                                     <materialDesign:PackIcon Kind="Refresh" Width="30" Height="30"/>
                                 </Button>
                             </StackPanel>
                         </StackPanel>
                     </Grid>
                     <Grid Grid.Row="2">
-                        <DataGrid Background="AliceBlue" Margin="30 10" ItemsSource="{Binding Items3}"
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="443*"/>
+                            <ColumnDefinition Width="57*"/>
+                        </Grid.ColumnDefinitions>
+                        <DataGrid Name="dtgBook" Background="AliceBlue" Margin="30 10" ItemsSource="{Binding Items3}"
                                 CanUserSortColumns="True" CanUserAddRows="False"
                                 materialDesign:DataGridAssist.CellPadding="4 2 2 2"
-                                materialDesign:DataGridAssist.ColumnHeaderPadding="4 2 2 2" />
+                                materialDesign:DataGridAssist.ColumnHeaderPadding="4 2 2 2" MouseDoubleClick="DtgBook_MouseDoubleClick" Grid.ColumnSpan="2"/>
 
                     </Grid>
 

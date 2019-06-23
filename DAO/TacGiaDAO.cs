@@ -26,5 +26,20 @@ namespace DAO
             }
             return result;
         }
+        public static string  addAuthor(string name)
+        {
+            string querry = @"INSERT INTO TacGia (TenTacGia) VALUES (N'" + name + "')";
+            int result = DataProvider.ExecuteNonQuerry(querry);
+            if (result > 0)
+            {
+                querry = @"SELECT IDENT_CURRENT('TacGia') AS Id";
+                string id = DataProvider.ExecuteQuerry(querry).Rows[0]["Id"].ToString();
+                return id;
+            }
+            else
+            {
+                return null;
+            }
+        }
     }
 }

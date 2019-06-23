@@ -10,9 +10,7 @@ namespace BUS
 {
     public class TheLoaiBUS
     {
-        public static List<TheLoaiDTO> GetAllCategories()
-        {
-            return TheLoaiDAO.GetAllCategories();
-        }
+        public static List<TheLoaiDTO> getAllCategories() => TheLoaiDAO.getAllCategories();
+        public static string addCategory(string name) => TheLoaiDAO.addCategory(name);
     }
 }

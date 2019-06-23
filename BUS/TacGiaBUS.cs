@@ -10,9 +10,7 @@ namespace BUS
 {
     public class TacGiaBUS
     {
-        public static List<TacGiaDTO> getAllAuthors()
-        {
-            return TacGiaDAO.getAllAuthors();
-        }
+        public static List<TacGiaDTO> getAllAuthors() => TacGiaDAO.getAllAuthors();
+        public static string addAuthor(string name) => TacGiaDAO.addAuthor(name);
     }
 }

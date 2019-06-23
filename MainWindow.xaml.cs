@@ -29,7 +29,7 @@ namespace BookStore_WPF
             InitializeComponent();
             List<SachDTO> listSach = SachBUS.GetAll();
             dtgBook.ItemsSource = listSach;
-            List<TheLoaiDTO> listTheLoai = TheLoaiBUS.GetAllCategories();
+            List<TheLoaiDTO> listTheLoai = TheLoaiBUS.getAllCategories();
             cbbCategory.ItemsSource = listTheLoai;
             List<TacGiaDTO> listTacGia = TacGiaBUS.getAllAuthors();
             cbbAuthor.ItemsSource = listTacGia;
