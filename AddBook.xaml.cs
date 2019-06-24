@@ -99,7 +99,7 @@ namespace BookStore_WPF
 
         private void BtnCancel_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Close();
         }
     }
 }

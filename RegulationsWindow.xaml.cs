@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,22 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using BookStore_WPF.ViewModel;
 
-namespace BookStore_WPF.UserControlZone
+namespace BookStore_WPF
 {
     /// <summary>
-    /// Interaction logic for ControlBarUC.xaml
+    /// Interaction logic for RegulationsWindow.xaml
     /// </summary>
-    public partial class ControlBarUC : UserControl
+    public partial class RegulationsWindow : Window
     {
-        public ControlBarViewModel ViewModel { get; set; }
-        public ControlBarUC()
+        public RegulationsWindow()
         {
             InitializeComponent();
-            this.DataContext = ViewModel = new ControlBarViewModel();
         }
     }
 }

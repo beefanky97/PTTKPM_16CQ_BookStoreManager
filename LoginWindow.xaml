@@ -16,7 +16,7 @@
      FontFamily="{DynamicResource MaterialDesignFont}"
         ResizeMode="NoResize"
         WindowStyle="None"
-        Title="Đăng nhập" Height="500" Width="350"
+        Title="Đăng nhập" Height="500" Width="1000"
         Name="loginWindow">
     <Grid>
         <Rectangle Height="280" VerticalAlignment="Top">

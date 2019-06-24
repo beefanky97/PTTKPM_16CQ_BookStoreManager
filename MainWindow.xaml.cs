@@ -34,6 +34,14 @@ namespace BookStore_WPF
             List<TacGiaDTO> listTacGia = TacGiaBUS.getAllAuthors();
             cbbAuthor.ItemsSource = listTacGia;
             lblDate.Content = DateTime.Now.Date.ToString();
+            //Comment để test giao diện --------------------------------------------------------------------------------------------------
+            //List<SachDTO> listSach = SachBUS.GetAll();
+            //dtgBook.ItemsSource = listSach;
+            //List<TheLoaiDTO> listTheLoai = TheLoaiBUS.GetAllCategories();
+            //cbbCategory.ItemsSource = listTheLoai;
+            //List<TacGiaDTO> listTacGia = TacGiaBUS.getAllAuthors();
+            //cbbAuthor.ItemsSource = listTacGia;
+            //lblDate.Content = DateTime.Now.Date.ToString();
         }
 
         private void CbbCategory_SelectionChanged(object sender, SelectionChangedEventArgs e)

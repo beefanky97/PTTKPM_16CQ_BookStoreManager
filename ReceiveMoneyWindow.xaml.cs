@@ -63,7 +63,7 @@ namespace BookStore_WPF
                 int deb = price - cash;
                 if (deb == 0)
                 {
-                    if (KhachHangBUS.checkDeb(name, phone) == )
+                    //if (KhachHangBUS.checkDeb(name, phone) == 1)
                     Bill.SoTienThanhToan = cash.ToString();
                     Customer.CongNo = null;
                     int res = KhachHangBUS.addCustomer(Customer);
@@ -96,7 +96,7 @@ namespace BookStore_WPF
                         int res = KhachHangBUS.addCustomer(Customer);
                     } else
                     {
-                        if (KhachHangBUS.checkDeb(name, phone ==))
+                        //if (KhachHangBUS.checkDeb(name, phone ==))
                     }
                 }
             }

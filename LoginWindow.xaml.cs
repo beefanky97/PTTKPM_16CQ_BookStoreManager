@@ -82,20 +82,6 @@ namespace BookStore_WPF
                     txbError.Visibility = Visibility.Visible;
                 }
             }
-<<<<<<< Updated upstream
-            NguoiDungDTO dangnhap = NguoiDungBUS.Login(nguoidung);
-            if (dangnhap != null)
-            {
-                Window mainWindow = new MainWindow();
-                this.Close();
-                mainWindow.ShowDialog();
-            }
-            else
-            {
-                txbError.Visibility = Visibility.Visible;
-            }
-=======
->>>>>>> Stashed changes
         }
     }
 }

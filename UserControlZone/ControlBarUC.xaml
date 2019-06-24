@@ -8,7 +8,7 @@
              xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
              Name="ucControlBar"
              mc:Ignorable="d" 
-             Height="36">
+             Height="37.2">
 
     <i:Interaction.Triggers>
         <i:EventTrigger EventName="MouseLeftButtonDown">
@@ -16,7 +16,10 @@
         </i:EventTrigger>
     </i:Interaction.Triggers>
     <Grid>
-        <materialDesign:ColorZone Background="LightGray">
+        <Grid.Resources>
+            <BooleanToVisibilityConverter x:Key="BoolToVisibility" />
+        </Grid.Resources>
+        <materialDesign:ColorZone Background="LightGray" Height="54" Margin="0,0,0,-17.2">
             <DockPanel>
                 <StackPanel DockPanel.Dock="Right" Background="Transparent" Orientation="Horizontal">
                     <StackPanel.Resources>
@@ -48,13 +51,18 @@
                 </StackPanel>
 
                 <StackPanel DockPanel.Dock="Left" Orientation="Horizontal">
-                    <StackPanel Orientation="Vertical">
-                        <ToggleButton Name="btnMenu"  Style="{DynamicResource MaterialDesignHamburgerToggleButton}" Checked="btnMenu_Checked" />
-                        <StackPanel Name="pnlMenu"  Background="White">
-                            <Button Content="xxx"/>
-                            <Button Content="xxx"/>
-                            <Button Content="xxx"/>
+                    <StackPanel Orientation="Horizontal">
+                        <!--Xử lý tắt mở Menu-->
+                        <ToggleButton HorizontalAlignment="Left" Name="btnMenu" IsChecked="True"  Style="{DynamicResource MaterialDesignHamburgerToggleButton}" />
+                        <StackPanel Orientation="Horizontal" Name="pnlMenu"  Background="White" Visibility="{Binding IsChecked, ElementName=btnMenu, Converter={StaticResource BoolToVisibility}}">
+                            <Button Background="LightGreen" HorizontalAlignment="Left" Width="130" Height="54">Màn hình chính</Button>
+                            <Button Background="LightGreen" HorizontalAlignment="Left" Width="120" Height="54">Nhập sách</Button>
+                            <Button Background="LightGreen" HorizontalAlignment="Left" Width="130" Height="54">Phiếu thu tiền</Button>
+                            <Button Background="LightGreen" HorizontalAlignment="Left" Width="140" Height="54">Báo cáo tồn sách</Button>
+                            <Button Background="LightGreen" HorizontalAlignment="Left" Width="140" Height="54">Báo cáo công nợ</Button>
+                            <Button Background="LightGreen" HorizontalAlignment="Left" Width="120" Height="54">Xem quy định</Button>
                         </StackPanel>
+                        <!-- ========================================== -->
                     </StackPanel>
                     <TextBlock VerticalAlignment="Center" Margin="16 0 0 0" Width="800" Text="{Binding Tag, ElementName=ucControlBar}">
                     </TextBlock>

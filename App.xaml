@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:BookStore_WPF"
              
-             StartupUri="AddBook.xaml">
+             StartupUri="LoginWindow.xaml">
             
     <Application.Resources>
         <ResourceDictionary>
