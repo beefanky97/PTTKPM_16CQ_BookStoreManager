@@ -69,7 +69,7 @@
                             <materialDesign:PackIcon Kind="Coin" />
                             <TextBox Name="txtMoney" Width="350" materialDesign:HintAssist.Hint="Số tiền thu" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
                         </StackPanel>
-                        <Button Background="LightGreen" HorizontalAlignment="Left" Margin="10" Width="150" Height="40">Huỷ</Button>
+                        <Button Name="btnCancel" Background="LightGreen" HorizontalAlignment="Left" Margin="10" Width="150" Height="40" Click="BtnCancel_Click">Huỷ</Button>
 
                     </StackPanel>
                 </Grid>

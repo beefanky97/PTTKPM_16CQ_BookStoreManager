@@ -16,7 +16,7 @@
      FontFamily="{DynamicResource MaterialDesignFont}"
         ResizeMode="NoResize"
         WindowStyle="None"
-        Title="Đăng nhập" Height="500" Width="1000"
+        Title="Đăng nhập" Height="500" Width="350"
         Name="loginWindow">
     <Grid>
         <Rectangle Height="280" VerticalAlignment="Top">
@@ -39,9 +39,9 @@
                 <TextBox Name="txtUsername" Margin="0,10" materialDesign:HintAssist.Hint="User name" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontFamily="Champagne &amp; Limousine" FontSize="18"/>
                 <PasswordBox Name="pswPassword" Margin="0,10" materialDesign:HintAssist.Hint="Password" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" FontFamily="Champagne &amp; Limousine" FontSize="18"/>
                 <StackPanel Orientation="Horizontal">
-                    <RadioButton Name="rbManager" GroupName="UserKind" Content="Manager"/>
-                    <RadioButton Name="rbWarehouse"  GroupName="UserKind" Content="Warehouse staff"/>
-                    <RadioButton Name="rbCasher" GroupName="UserKind" Content="Cashier"/>
+                    <RadioButton Name="rbManager" GroupName="UserKind" Content="Quản lí"/>
+                    <RadioButton Name="rbWarehouse"  GroupName="UserKind" Content="Nhập kho"/>
+                    <RadioButton Name="rbCasher" GroupName="UserKind" Content="Bán hàng"/>
                 </StackPanel>
                 <TextBlock Name="txbError" Text="Login failed" Foreground="Red" Visibility="Hidden"/>
             </StackPanel>

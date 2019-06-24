@@ -58,22 +58,45 @@ namespace BookStore_WPF
             }
             else
             {
+                foreach(SachDTO item in Bill.Sach)
+                {
+                    int amount = SachBUS.FindAmount(item);
+                    int buyed = int.Parse(item.LuongTon);
+                    int remain = amount - buyed;
+                    item.LuongTon = remain.ToString();
+                    int result = SachBUS.ChangeAmount(item);
+                }
                 int cash = int.Parse(money);
                 int price = int.Parse(Bill.ThanhTien);
                 int deb = price - cash;
                 if (deb == 0)
                 {
-                    //if (KhachHangBUS.checkDeb(name, phone) == 1)
-                    Bill.SoTienThanhToan = cash.ToString();
-                    Customer.CongNo = null;
-                    int res = KhachHangBUS.addCustomer(Customer);
-                    if (res <= 0)
+                    if (KhachHangBUS.checkDeb(name, phone) == 0)
                     {
-                        MessageBox.Show("Error in database", "Error", MessageBoxButton.OK, MessageBoxImage.Asterisk);
+                        Bill.SoTienThanhToan = cash.ToString();
+                        Customer.CongNo = null;
+                        int res = KhachHangBUS.addCustomer(Customer);
+                        if (res <= 0)
+                        {
+                            MessageBox.Show("Error in database", "Error", MessageBoxButton.OK, MessageBoxImage.Asterisk);
+                        }
+                        else
+                        {
+                            res = HoaDonBUS.AddBill(Bill);
+                            if (res <= 0)
+                            {
+                                MessageBox.Show("Error in database", "Error", MessageBoxButton.OK, MessageBoxImage.Asterisk);
+                            }
+                            else
+                            {
+                                MessageBox.Show("Successfull", "Information", MessageBoxButton.OK,
+                                    MessageBoxImage.Exclamation);
+                            }
+                        }
                     }
                     else
                     {
-                        res = HoaDonBUS.AddBill(Bill);
+                        int res = HoaDonBUS.AddBill(Bill);
                         if (res <= 0)
                         {
                             MessageBox.Show("Error in database", "Error", MessageBoxButton.OK, MessageBoxImage.Asterisk);
@@ -94,12 +117,44 @@ namespace BookStore_WPF
                         Customer.CongNo.NoCuoi = deb.ToString();
                         Customer.CongNo.PhatSinh = deb.ToString();
                         int res = KhachHangBUS.addCustomer(Customer);
+                        res = HoaDonBUS.AddBill(Bill);
+                        if (res <= 0)
+                        {
+                            MessageBox.Show("Error in database", "Error", MessageBoxButton.OK, MessageBoxImage.Asterisk);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Successfull", "Information", MessageBoxButton.OK,
+                                MessageBoxImage.Exclamation);
+                        }
                     } else
                     {
-                        //if (KhachHangBUS.checkDeb(name, phone ==))
+                        KhachHangDTO finded = KhachHangBUS.GetCustomer(name, phone);
+                        CongNoDTO newDeb = CongnoBUS.getDeb(finded.CongNo.Id);
+                        int nocuoi = int.Parse(newDeb.NoCuoi);
+                        int phatsinh = nocuoi + deb;
+                        newDeb.NoDau = newDeb.NoCuoi;
+                        newDeb.NoCuoi = phatsinh.ToString();
+                        newDeb.PhatSinh = deb.ToString();
+                        CongnoBUS.updateDeb(newDeb);
+                        int res = HoaDonBUS.AddBill(Bill);
+                        if (res <= 0)
+                        {
+                            MessageBox.Show("Error in database", "Error", MessageBoxButton.OK, MessageBoxImage.Asterisk);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Successfull", "Information", MessageBoxButton.OK,
+                                MessageBoxImage.Exclamation);
+                        }
                     }
                 }
             }
+        }
+
+        private void BtnCancel_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

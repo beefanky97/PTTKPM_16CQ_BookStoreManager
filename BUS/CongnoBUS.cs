@@ -12,5 +12,7 @@ namespace BUS
     public class CongnoBUS
     {
         public static string addDeb(CongNoDTO congno) => CongNoDAO.addDeb(congno);
+        public static int updateDeb(CongNoDTO deb) => CongNoDAO.updateDeb(deb);
+        public static CongNoDTO getDeb(string id) => CongNoDAO.getDeb(id);
     }
 }

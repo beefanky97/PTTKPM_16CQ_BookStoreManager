@@ -31,5 +31,40 @@ namespace DAO
             dangnhap.NhanVienNhapKho = result.Rows[0]["NhanVienNhapKho"].ToString();
             return dangnhap;
         }
+
+        public static List<NguoiDungDTO> getAll()
+        {
+            string querry = @"SELECT * FROM NguoiDung WHERE DaXoa=0";
+            DataTable table = DataProvider.ExecuteQuerry(querry);
+            List<NguoiDungDTO> list = new List<NguoiDungDTO>();
+            for (int i = 0; i < table.Rows.Count; i++)
+            {
+                NguoiDungDTO item = new NguoiDungDTO();
+                item.TenDangNhap = table.Rows[i]["TenDangNhap"].ToString();
+                item.HoTen = table.Rows[i]["HoTen"].ToString();
+                item.MatKhau = table.Rows[i]["MatKhau"].ToString();
+                item.Email = table.Rows[i]["Email"].ToString();
+                item.QuanLi = table.Rows[i]["QuanLi"].ToString();
+                item.NhanVienBanHang = table.Rows[i]["NhanVienBanHang"].ToString();
+                item.NhanVienNhapKho = table.Rows[i]["NhanVienNhapKho"].ToString();
+                item.DaXoa = table.Rows[i]["DaXoa"].ToString();
+                item.Id = table.Rows[i]["Id"].ToString();
+                list.Add(item);
+            }
+            return list;
+        }
+        public static int addEmployee(NguoiDungDTO employee)
+        {
+            string querry = @"INSERT INTO NguoiDung (Email, MatKhau, HoTen, TenDangNhap, DaXoa, QuanLi, NhanVienNhapKho, NhanVienBanHang) VALUES ( N'" + employee.Email + "',N'" + employee.MatKhau + "', N'" + employee.HoTen + "', N'" + employee.TenDangNhap + "', " + employee.DaXoa + ", " + employee.QuanLi + ", " + employee.NhanVienNhapKho + ", " + employee.NhanVienBanHang + ")";
+            int result = DataProvider.ExecuteNonQuerry(querry);
+            return result;
+        }
+
+        public static int editEmployee(NguoiDungDTO employee)
+        {
+            string querry = @"UPDATE NguoiDung SET Email = N'" + employee.Email + "', MatKhau = N'" + employee.MatKhau + "', HoTen = N'" + employee.HoTen + "', TenDangNhap = N'" + employee.TenDangNhap + "', DaXoa = " + employee.DaXoa + ", QuanLi = " + employee.QuanLi + ", NhanVienNhapKho = " + employee.NhanVienNhapKho + ", NhanVienBanHang = " + employee.NhanVienBanHang + " WHERE Id = " + employee.Id;
+            int result = DataProvider.ExecuteNonQuerry(querry);
+            return result;
+        }
     }
 }

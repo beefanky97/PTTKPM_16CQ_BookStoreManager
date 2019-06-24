@@ -94,5 +94,14 @@ namespace BookStore_WPF
             Window receiveMoney = new ReceiveMoneyWindow(bill, customer);
             receiveMoney.ShowDialog();
         }
+
+        private void BtnReChoice_Click(object sender, RoutedEventArgs e)
+        {
+            selectedBooks.RemoveRange(0, selectedBooks.Count);
+            dtgSelectedItem.ItemsSource = selectedBooks;
+            dtgSelectedItem.Items.Refresh();
+            txtAmount.Text = "";
+            txtPrice.Text = "";
+        }
     }
 }

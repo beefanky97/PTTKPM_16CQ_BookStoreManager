@@ -27,5 +27,41 @@ namespace BookStore_WPF.UserControlZone
             InitializeComponent();
             this.DataContext = ViewModel = new ControlBarViewModel();
         }
+
+        private void BtnHome_Click(object sender, RoutedEventArgs e)
+        {
+            Window main = new MainWindow();
+            main.ShowDialog();
+        }
+
+        private void BtnAddBook_Click(object sender, RoutedEventArgs e)
+        {
+            Window add = new AddBook();
+            add.ShowDialog();
+        }
+
+        private void BtnReceiveMonney_Click(object sender, RoutedEventArgs e)
+        {
+            Window receive = new ReceiveMoneyWindow();
+            receive.ShowDialog();
+        }
+
+        private void BtnBookReport_Click(object sender, RoutedEventArgs e)
+        {
+            Window bookReport = new ReportBookWindow();
+            bookReport.ShowDialog();
+        }
+
+        private void BtnReportDeb_Click(object sender, RoutedEventArgs e)
+        {
+            Window debReport = new ReportDebtorsWindow();
+            debReport.ShowDialog();
+        }
+
+        private void BtnRule_Click(object sender, RoutedEventArgs e)
+        {
+            Window admin = new RegulationsWindow();
+            admin.ShowDialog();
+        }
     }
 }

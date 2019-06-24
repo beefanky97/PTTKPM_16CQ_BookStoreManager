@@ -15,5 +15,6 @@ namespace BUS
         public static List<SachDTO> GetBookByCategory(TheLoaiDTO theloai) => SachDAO.GetBookByCategory(theloai);
         public static int AddBook(SachDTO book) => SachDAO.addBook(book);
         public static int ChangeAmount(SachDTO book) => SachDAO.changeAmount(book);
+        public static int FindAmount(SachDTO book) => SachDAO.findAmount(book);
     }
 }

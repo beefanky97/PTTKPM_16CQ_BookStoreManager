@@ -8,7 +8,7 @@
         xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
 
         xmlns:uc="clr-namespace:BookStore_WPF.UserControlZone"
-       mc:Ignorable="d"
+
          xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
      TextElement.FontWeight="Regular"
@@ -22,14 +22,18 @@
         DataContext="{StaticResource MainVM}"
         Title="Chỉnh sửa qui định" Height="800" Width="1000"
         Name="editRegulations">
-
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="BoolToVisibility" />
+    </Window.Resources>
     <i:Interaction.Triggers>
         <i:EventTrigger EventName="Loaded">
             <i:InvokeCommandAction Command="{Binding LoadedWindowCommand}" />
         </i:EventTrigger>
     </i:Interaction.Triggers>
     <Grid>
+        
         <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
             <RowDefinition Height="auto"></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
@@ -37,67 +41,137 @@
         <Grid Grid.Row="0">
             <uc:ControlBarUC Tag="{Binding Title, ElementName=editRegulations}"></uc:ControlBarUC>
         </Grid>
-        <Grid Grid.Row="1">
-            <materialDesign:Card Margin="50" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Grid Grid.Row="1" Margin="0,0.2,0,0">
+            <materialDesign:Card Margin="0 35 0 0" Height="500" Width="900" HorizontalAlignment="Center" VerticalAlignment="Top">
                 <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition></RowDefinition>
-                        <RowDefinition></RowDefinition>
-                    </Grid.RowDefinitions>
-                    <Grid Row ="0">
-                        <TextBlock HorizontalAlignment="Center" Margin="20" Style="{StaticResource MaterialDesignDisplay3TextBlock}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid Row ="0">
+                            <TextBlock HorizontalAlignment="Center" Margin="76,40,76.2,138.6" Style="{StaticResource MaterialDesignDisplay3TextBlock}">
                             Quy định nhà sách
-                        </TextBlock>
+                            </TextBlock>
+                        </Grid>
+                        <Grid Margin="0,135,-0.4,0" Grid.RowSpan="2">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <!--Column 0-->
+                            <StackPanel Margin="30 10 10 10" Grid.Column="0" Orientation="Vertical" VerticalAlignment="Center">
+                                <TextBlock TextDecorations="Underline" Margin="10 0 0 0">Quy định khi nhập sách:</TextBlock>
+                                <StackPanel Orientation="Horizontal" Margin="15">
+                                    <materialDesign:PackIcon Kind="Book" />
+                                    <TextBox IsEnabled="{Binding ElementName=allowEditCheck, Path=IsChecked}" Name="txtMinAmount" Width="200" materialDesign:HintAssist.Hint="Số lượng nhập tối thiểu" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                                </StackPanel>
+                                <TextBlock TextDecorations="Underline" Margin="10 0 0 0">Quy định sau khi bán:</TextBlock>
+
+                                <StackPanel Orientation="Horizontal" Margin="15">
+                                    <materialDesign:PackIcon Kind="CurrencyUsd" />
+                                    <TextBox IsEnabled="{Binding ElementName=allowEditCheck, Path=IsChecked}" Name="txtMaxDeb" Width="200" materialDesign:HintAssist.Hint="Mức nợ tối đa" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Margin="20 15 0 0">
+                                    <!--<TextBox Name="txt" Width="350" materialDesign:HintAssist.Hint="Ngày thu tiền" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />-->
+                                    <TextBlock FontWeight="Bold"  FontSize="20"> Bật qui định:</TextBlock>
+                                    <ToggleButton IsEnabled="{Binding ElementName=allowEditCheck, Path=IsChecked}" Margin="20 0 0 0" Style="{StaticResource MaterialDesignSwitchAccentToggleButton}" ToolTip="MaterialDesignSwitchAccentToggleButton" IsChecked="True" />
+                                </StackPanel>
+                                <Button IsEnabled="{Binding ElementName=allowEditCheck, Path=IsChecked}" Name="btnSave" Background="MediumPurple" Margin="10 30 10 10" HorizontalAlignment="Right" Width="150" Height="40" >Lưu qui định</Button>
+                            </StackPanel>
+
+                            <!--Column 1-->
+                            <StackPanel Margin="60 25 0 0" Grid.Column="1" Orientation="Vertical" VerticalAlignment="Top">
+                                <StackPanel Orientation="Horizontal" Margin="15 45 15 0">
+                                    <materialDesign:PackIcon Kind="HomeCurrencyUsd" />
+                                    <TextBox  IsEnabled="{Binding ElementName=allowEditCheck, Path=IsChecked}" Name="txtMin" Width="220" materialDesign:HintAssist.Hint="Sách tồn tối thiểu trước khi nhập" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Margin="15 47 15 0">
+                                    <materialDesign:PackIcon Kind="HomeCurrencyUsd" />
+                                    <TextBox IsEnabled="{Binding ElementName=allowEditCheck, Path=IsChecked}" Name="txtSold" Width="200" materialDesign:HintAssist.Hint="Sách tồn tối thiểu sau khi bán" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Margin="10 35 0 0">
+                                    <!--<TextBox Name="txt" Width="350" materialDesign:HintAssist.Hint="Ngày thu tiền" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />-->
+                                    <TextBlock FontWeight="Bold" Margin="20 0 0 0" FontSize="20"> Cho phép chỉnh sửa:</TextBlock>
+                                    <ToggleButton Style="{StaticResource MaterialDesignSwitchToggleButton}" ToolTip="MaterialDesignSwitchToggleButton" Margin="10 0 0 0" IsChecked="False" Name="allowEditCheck"/>
+                                </StackPanel>
+                                <Button Name="btnCancel" Background="LightGreen" HorizontalAlignment="Left" Margin="10 25 0 0" Width="150" Height="40" Click="BtnCancel_Click">Thoát</Button>
+
+                            </StackPanel>
+                        </Grid>
                     </Grid>
-                    <Grid Row ="1">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition></ColumnDefinition>
-                            <ColumnDefinition></ColumnDefinition>
-                        </Grid.ColumnDefinitions>
-                        <!--Column 0-->
-                        <StackPanel Margin="30 10 10 10" Grid.Column="0" Orientation="Vertical" VerticalAlignment="Center">
-                            <TextBlock TextDecorations="Underline" Margin="10 0 0 0">Quy định khi nhập sách:</TextBlock>
-                            <StackPanel Orientation="Horizontal" Margin="15">
-                                <materialDesign:PackIcon Kind="Book" />
-                                <TextBox IsEnabled="{Binding ElementName=allowEditCheck, Path=IsChecked}" Name="txtName" Width="350" materialDesign:HintAssist.Hint="Số lượng nhập tối thiểu" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-                            </StackPanel>
-                            <TextBlock TextDecorations="Underline" Margin="10 0 0 0">Quy định sau khi bán:</TextBlock>
-
-                            <StackPanel Orientation="Horizontal" Margin="15">
-                                <materialDesign:PackIcon Kind="CurrencyUsd" />
-                                <TextBox IsEnabled="{Binding ElementName=allowEditCheck, Path=IsChecked}" Name="txtPhone" Width="350" materialDesign:HintAssist.Hint="Mức nợ tối đa" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal" Margin="40 0 0 0">
-                                <!--<TextBox Name="txt" Width="350" materialDesign:HintAssist.Hint="Ngày thu tiền" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />-->
-                                <TextBlock FontWeight="Bold"  FontSize="20"> Bật qui định:</TextBlock>
-                                <ToggleButton IsEnabled="{Binding ElementName=allowEditCheck, Path=IsChecked}" Margin="20 0 0 0" Style="{StaticResource MaterialDesignSwitchAccentToggleButton}" ToolTip="MaterialDesignSwitchAccentToggleButton" IsChecked="True" />
-                            </StackPanel>
-                            <Button IsEnabled="{Binding ElementName=allowEditCheck, Path=IsChecked}" Name="btnSave" Background="MediumPurple" Margin="10" HorizontalAlignment="Right" Width="150" Height="40" Click="BtnSave_Click">Lưu qui định</Button>
-                        </StackPanel>
-
-                        <!--Column 1-->
-                        <StackPanel Margin="60 25 0 0" Grid.Column="1" Orientation="Vertical" VerticalAlignment="Top">
-                            <StackPanel Orientation="Horizontal" Margin="15 15 15 0">
-                                <materialDesign:PackIcon Kind="HomeCurrencyUsd" />
-                                <TextBox IsEnabled="{Binding ElementName=allowEditCheck, Path=IsChecked}" Name="txtAddress" Width="350" materialDesign:HintAssist.Hint="Lượng sách tồn tối thiểu trước khi nhập" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal" Margin="15 43 15 0">
-                                <materialDesign:PackIcon Kind="HomeCurrencyUsd" />
-                                <TextBox IsEnabled="{Binding ElementName=allowEditCheck, Path=IsChecked}" Name="txtEmail" Width="350" materialDesign:HintAssist.Hint="Lượng tồn tối thiểu sau khi bán" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal" Margin="30 15 0 0">
-                                <!--<TextBox Name="txt" Width="350" materialDesign:HintAssist.Hint="Ngày thu tiền" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />-->
-                                <TextBlock FontWeight="Bold" Margin="20 0 0 0" FontSize="20"> Cho phép chỉnh sửa:</TextBlock>
-                                <ToggleButton Style="{StaticResource MaterialDesignSwitchToggleButton}" ToolTip="MaterialDesignSwitchToggleButton" Margin="10 0 0 0" IsChecked="False" Name="allowEditCheck"/>
-                            </StackPanel>
-                            <Button Background="LightGreen" HorizontalAlignment="Left" Margin="10 20 0 0" Width="150" Height="40">Thoát</Button>
+                    <Border Grid.Column="1" BorderThickness="1 0 0 0" BorderBrush="Black"></Border>
+                    <Grid Grid.Column="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <TextBlock Padding="5" Grid.Row="0" FontWeight="Bold" TextAlignment="Center" HorizontalAlignment="Center" FontSize="30" >Danh sách <LineBreak/> nhân viên</TextBlock>
+                        <Grid Grid.Row="1">
+                            <DataGrid Name="dtgEmployeesList" Margin="4" Height="330" Background="AliceBlue" ItemsSource="{Binding Items3}" CanUserSortColumns="True"
+                                CanUserAddRows="False"
+                                materialDesign:DataGridAssist.CellPadding="4 2 2 2"
+                                materialDesign:DataGridAssist.ColumnHeaderPadding="4 2 2 2" MouseDoubleClick="DtgEmployeesList_MouseDoubleClick"/>
+                        </Grid>
+                        <Border Grid.Row="1" BorderBrush="Black" BorderThickness="0 1"></Border>
+                        <StackPanel Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Center">
+                            <ToggleButton Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" ToolTip="MaterialDesignSwitchToggleButton" Margin="10 0 0 0" IsChecked="False" Name="btnAddEmployee" Content="+" Click="BtnAddEmployee_Click"/>
+                            <Button Margin="10" Name="btnDeleteEmployee" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Background="red" ToolTip="DeleteEmployee" Click="BtnDeleteEmployee_Click">
+                                <materialDesign:PackIcon Kind="DeleteForever" />
+                            </Button>
 
                         </StackPanel>
                     </Grid>
-
 
                 </Grid>
             </materialDesign:Card>
+        </Grid>
+        <!--Row 2 lớn-->
+        <Grid Grid.Row="2" Margin="10" Visibility="{Binding IsChecked, ElementName=btnAddEmployee, Converter={StaticResource BoolToVisibility}}">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <StackPanel Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Center">
+                <StackPanel Orientation="Horizontal">
+                    <materialDesign:PackIcon Kind="ClipboardUser" />
+                    <TextBox Name="txtAccount" Width="270" materialDesign:HintAssist.Hint="Tên đăng nhập" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <materialDesign:PackIcon Kind="RenameBox" />
+                    <TextBox Name="txtName" Width="270" materialDesign:HintAssist.Hint="Họ và Tên" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <materialDesign:PackIcon Kind="Email" />
+                    <TextBox Name="txtEmail" Width="270" materialDesign:HintAssist.Hint="Email" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Margin="10" Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center">
+                <StackPanel Orientation="Horizontal">
+                    <materialDesign:PackIcon Kind="ForgotPassword" />
+                    <!--<TextBox Name="t" Width="270" materialDesign:HintAssist.Hint="Mật khẩu" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />-->
+                    <PasswordBox Name="txtPassword" Width="270" materialDesign:HintAssist.Hint="Mật khẩu" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"/>
+                </StackPanel>
+                <StackPanel Margin="30 0 0 0" Orientation="Horizontal" >
+                    <TextBlock VerticalAlignment="Center" FontSize="20">Chức vụ: </TextBlock>
+                    <StackPanel Margin="20 0" Orientation="Horizontal" VerticalAlignment="Center">
+                        <RadioButton FontSize="20" Name="rbManager" GroupName="UserKind" Content="Quản lí"/>
+                        <RadioButton FontSize="20" Name="rbWarehouse"  GroupName="UserKind" Content="Nhập kho"/>
+                        <RadioButton FontSize="20" Name="rbCasher" GroupName="UserKind" Content="Bán hàng"/>
+                    </StackPanel>
+
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Center">
+                <Button Margin="10" Name="btnConfirmAdd" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" ToolTip="AddEmployee" Click="BtnConfirmAdd_Click">V</Button>
+                <Button Margin="10" Name="btnRefresh" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Background="red" ToolTip="DeleteEmployee" Click="BtnRefresh_Click">X</Button>
+            </StackPanel>
         </Grid>
     </Grid>
 </Window>

@@ -216,9 +216,9 @@
                         </Button>
                     </Grid>
                     <Grid Grid.Column="1">
-                        <Button Style="{StaticResource MaterialDesignRaisedAccentButton}"
+                        <Button Name="btnReChoice" Style="{StaticResource MaterialDesignRaisedAccentButton}"
                                 Background="LightPink"
-                            Width="110" ToolTip="Resource name: MaterialDesignRaisedAccentButton">
+                            Width="110" ToolTip="Resource name: MaterialDesignRaisedAccentButton" Click="BtnReChoice_Click">
                             Huỷ
                         </Button>
                     </Grid>

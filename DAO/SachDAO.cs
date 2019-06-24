@@ -92,5 +92,12 @@ namespace DAO
             int result = DataProvider.ExecuteNonQuerry(querry);
             return result;
         }
+
+        public static int findAmount(SachDTO book)
+        {
+            string querry = @"SELECT * FROM Sach WHERE Id=" + book.Id;
+            DataTable table = DataProvider.ExecuteQuerry(querry);
+            return int.Parse(table.Rows[0]["LuongTon"].ToString());
+        }
     }
 }

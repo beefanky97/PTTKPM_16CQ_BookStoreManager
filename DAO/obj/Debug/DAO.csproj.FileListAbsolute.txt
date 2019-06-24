@@ -7,3 +7,12 @@ D:\My Documents\Exercises\Deadline_3rd\HK2\PTTK\PTTKPM_16CQ_BookStoreManager\DAO
 D:\My Documents\Exercises\Deadline_3rd\HK2\PTTK\PTTKPM_16CQ_BookStoreManager\DAO\obj\Debug\DAO.csproj.CopyComplete
 D:\My Documents\Exercises\Deadline_3rd\HK2\PTTK\PTTKPM_16CQ_BookStoreManager\DAO\obj\Debug\DAO.dll
 D:\My Documents\Exercises\Deadline_3rd\HK2\PTTK\PTTKPM_16CQ_BookStoreManager\DAO\obj\Debug\DAO.pdb
+W:\DeadLine\WPF\BookStoreManager\DAO\bin\Debug\DAO.dll
+W:\DeadLine\WPF\BookStoreManager\DAO\bin\Debug\DAO.pdb
+W:\DeadLine\WPF\BookStoreManager\DAO\bin\Debug\DTO.dll
+W:\DeadLine\WPF\BookStoreManager\DAO\bin\Debug\DTO.pdb
+W:\DeadLine\WPF\BookStoreManager\DAO\obj\Debug\DAO.csprojAssemblyReference.cache
+W:\DeadLine\WPF\BookStoreManager\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+W:\DeadLine\WPF\BookStoreManager\DAO\obj\Debug\DAO.csproj.CopyComplete
+W:\DeadLine\WPF\BookStoreManager\DAO\obj\Debug\DAO.dll
+W:\DeadLine\WPF\BookStoreManager\DAO\obj\Debug\DAO.pdb

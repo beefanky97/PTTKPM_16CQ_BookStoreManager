@@ -43,3 +43,56 @@ D:\My Documents\Exercises\Deadline_3rd\HK2\PTTK\PTTKPM_16CQ_BookStoreManager\obj
 D:\My Documents\Exercises\Deadline_3rd\HK2\PTTK\PTTKPM_16CQ_BookStoreManager\obj\Debug\BookStore-WPF.csproj.CopyComplete
 D:\My Documents\Exercises\Deadline_3rd\HK2\PTTK\PTTKPM_16CQ_BookStoreManager\obj\Debug\BookStore-WPF.exe
 D:\My Documents\Exercises\Deadline_3rd\HK2\PTTK\PTTKPM_16CQ_BookStoreManager\obj\Debug\BookStore-WPF.pdb
+D:\My Documents\Exercises\Deadline_3rd\HK2\PTTK\PTTKPM_16CQ_BookStoreManager\obj\Debug\ReportBookDetail.g.cs
+D:\My Documents\Exercises\Deadline_3rd\HK2\PTTK\PTTKPM_16CQ_BookStoreManager\obj\Debug\ReportBookDetail.baml
+D:\My Documents\Exercises\Deadline_3rd\HK2\PTTK\PTTKPM_16CQ_BookStoreManager\obj\Debug\EditRegulationsWindow.g.cs
+D:\My Documents\Exercises\Deadline_3rd\HK2\PTTK\PTTKPM_16CQ_BookStoreManager\obj\Debug\EditRegulationsWindow.baml
+W:\DeadLine\WPF\BookStoreManager\obj\Debug\BookStore-WPF.csprojAssemblyReference.cache
+W:\DeadLine\WPF\BookStoreManager\obj\Debug\AddBook.g.cs
+W:\DeadLine\WPF\BookStoreManager\obj\Debug\LoginWindow.g.cs
+W:\DeadLine\WPF\BookStoreManager\obj\Debug\MainWindow.g.cs
+W:\DeadLine\WPF\BookStoreManager\obj\Debug\ReceiveMoneyWindow.g.cs
+W:\DeadLine\WPF\BookStoreManager\obj\Debug\ReportBookDetail.g.cs
+W:\DeadLine\WPF\BookStoreManager\obj\Debug\ReportBookWindow.g.cs
+W:\DeadLine\WPF\BookStoreManager\obj\Debug\ReportDebtorsWindow.g.cs
+W:\DeadLine\WPF\BookStoreManager\obj\Debug\UserControlZone\ControlBarUC.g.cs
+W:\DeadLine\WPF\BookStoreManager\obj\Debug\App.g.cs
+W:\DeadLine\WPF\BookStoreManager\obj\Debug\GeneratedInternalTypeHelper.g.cs
+W:\DeadLine\WPF\BookStoreManager\obj\Debug\BookStore-WPF_MarkupCompile.cache
+W:\DeadLine\WPF\BookStoreManager\obj\Debug\BookStore-WPF_MarkupCompile.lref
+W:\DeadLine\WPF\BookStoreManager\obj\Debug\BookStore-WPF.exe
+W:\DeadLine\WPF\BookStoreManager\obj\Debug\BookStore-WPF.pdb
+W:\DeadLine\WPF\BookStoreManager\bin\Debug\BookStore-WPF.exe.config
+W:\DeadLine\WPF\BookStoreManager\bin\Debug\BookStore-WPF.exe
+W:\DeadLine\WPF\BookStoreManager\bin\Debug\BookStore-WPF.pdb
+W:\DeadLine\WPF\BookStoreManager\bin\Debug\BUS.dll
+W:\DeadLine\WPF\BookStoreManager\bin\Debug\DTO.dll
+W:\DeadLine\WPF\BookStoreManager\bin\Debug\MaterialDesignColors.dll
+W:\DeadLine\WPF\BookStoreManager\bin\Debug\MaterialDesignThemes.Wpf.dll
+W:\DeadLine\WPF\BookStoreManager\bin\Debug\Microsoft.Expression.Interactions.dll
+W:\DeadLine\WPF\BookStoreManager\bin\Debug\System.Windows.Interactivity.dll
+W:\DeadLine\WPF\BookStoreManager\bin\Debug\DAO.dll
+W:\DeadLine\WPF\BookStoreManager\bin\Debug\BUS.pdb
+W:\DeadLine\WPF\BookStoreManager\bin\Debug\DTO.pdb
+W:\DeadLine\WPF\BookStoreManager\bin\Debug\MaterialDesignThemes.Wpf.pdb
+W:\DeadLine\WPF\BookStoreManager\bin\Debug\MaterialDesignThemes.Wpf.xml
+W:\DeadLine\WPF\BookStoreManager\bin\Debug\Microsoft.Expression.Interactions.xml
+W:\DeadLine\WPF\BookStoreManager\bin\Debug\System.Windows.Interactivity.xml
+W:\DeadLine\WPF\BookStoreManager\bin\Debug\DAO.pdb
+W:\DeadLine\WPF\BookStoreManager\obj\Debug\App.baml
+W:\DeadLine\WPF\BookStoreManager\obj\Debug\AddBook.baml
+W:\DeadLine\WPF\BookStoreManager\obj\Debug\LoginWindow.baml
+W:\DeadLine\WPF\BookStoreManager\obj\Debug\MainWindow.baml
+W:\DeadLine\WPF\BookStoreManager\obj\Debug\ReceiveMoneyWindow.baml
+W:\DeadLine\WPF\BookStoreManager\obj\Debug\ReportBookDetail.baml
+W:\DeadLine\WPF\BookStoreManager\obj\Debug\ReportBookWindow.baml
+W:\DeadLine\WPF\BookStoreManager\obj\Debug\ReportDebtorsWindow.baml
+W:\DeadLine\WPF\BookStoreManager\obj\Debug\Resource\MainResource.baml
+W:\DeadLine\WPF\BookStoreManager\obj\Debug\UserControlZone\ControlBarUC.baml
+W:\DeadLine\WPF\BookStoreManager\obj\Debug\BookStore-WPF.g.resources
+W:\DeadLine\WPF\BookStoreManager\obj\Debug\BookStore_WPF.Properties.Resources.resources
+W:\DeadLine\WPF\BookStoreManager\obj\Debug\BookStore-WPF.csproj.GenerateResource.cache
+W:\DeadLine\WPF\BookStoreManager\obj\Debug\BookStore-WPF.csproj.CoreCompileInputs.cache
+W:\DeadLine\WPF\BookStoreManager\obj\Debug\BookStore-WPF.csproj.CopyComplete
+W:\DeadLine\WPF\BookStoreManager\obj\Debug\RegulationsWindow.g.cs
+W:\DeadLine\WPF\BookStoreManager\obj\Debug\RegulationsWindow.baml

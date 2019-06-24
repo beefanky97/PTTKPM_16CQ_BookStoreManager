@@ -8,7 +8,7 @@
              xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
              Name="ucControlBar"
              mc:Ignorable="d" 
-             Height="37.2">
+             Height="57">
 
     <i:Interaction.Triggers>
         <i:EventTrigger EventName="MouseLeftButtonDown">
@@ -53,14 +53,14 @@
                 <StackPanel DockPanel.Dock="Left" Orientation="Horizontal">
                     <StackPanel Orientation="Horizontal">
                         <!--Xử lý tắt mở Menu-->
-                        <ToggleButton HorizontalAlignment="Left" Name="btnMenu" IsChecked="True"  Style="{DynamicResource MaterialDesignHamburgerToggleButton}" />
+                        <ToggleButton HorizontalAlignment="Left" Name="btnMenu" IsChecked="False"  Style="{DynamicResource MaterialDesignHamburgerToggleButton}" />
                         <StackPanel Orientation="Horizontal" Name="pnlMenu"  Background="White" Visibility="{Binding IsChecked, ElementName=btnMenu, Converter={StaticResource BoolToVisibility}}">
-                            <Button Background="LightGreen" HorizontalAlignment="Left" Width="130" Height="54">Màn hình chính</Button>
-                            <Button Background="LightGreen" HorizontalAlignment="Left" Width="120" Height="54">Nhập sách</Button>
-                            <Button Background="LightGreen" HorizontalAlignment="Left" Width="130" Height="54">Phiếu thu tiền</Button>
-                            <Button Background="LightGreen" HorizontalAlignment="Left" Width="140" Height="54">Báo cáo tồn sách</Button>
-                            <Button Background="LightGreen" HorizontalAlignment="Left" Width="140" Height="54">Báo cáo công nợ</Button>
-                            <Button Background="LightGreen" HorizontalAlignment="Left" Width="120" Height="54">Xem quy định</Button>
+                            <Button Name="btnHome" Background="LightGreen" HorizontalAlignment="Left" Width="130" Height="54" Click="BtnHome_Click">Màn hình chính</Button>
+                            <Button Name="btnAddBook"  Background="LightGreen" HorizontalAlignment="Left" Width="120" Height="54" Click="BtnAddBook_Click">Nhập sách</Button>
+                            <Button Name="btnReceiveMonney" Background="LightGreen" HorizontalAlignment="Left" Width="130" Height="54" Click="BtnReceiveMonney_Click">Phiếu thu tiền</Button>
+                            <Button Name="btnBookReport" Background="LightGreen" HorizontalAlignment="Left" Width="140" Height="54" Click="BtnBookReport_Click">Báo cáo tồn sách</Button>
+                            <Button Name="btnReportDeb" Background="LightGreen" HorizontalAlignment="Left" Width="140" Height="54" Click="BtnReportDeb_Click">Báo cáo công nợ</Button>
+                            <Button Name="btnRule" Background="LightGreen" HorizontalAlignment="Left" Width="120" Height="54" Click="BtnRule_Click">Xem quy định</Button>
                         </StackPanel>
                         <!-- ========================================== -->
                     </StackPanel>

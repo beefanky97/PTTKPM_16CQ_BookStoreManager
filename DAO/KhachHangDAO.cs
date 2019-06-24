@@ -35,14 +35,14 @@ namespace DAO
             string querry = "";
             if (customer.CongNo == null)
             {
-                querry = @"INSERT INTO KhachHang(TenKH, DiaChi, SDT, Email) VALUES (N'" + customer.TenKH + "', '" +
-                         customer.DiaChi + "', '" + customer.SDT + "', '" +
+                querry = @"INSERT INTO KhachHang(TenKH, DiaChi, SDT, Email) VALUES (N'" + customer.TenKH + "', N'" +
+                         customer.DiaChi + "', '" + customer.SDT + "', N'" +
                          customer.Email + "')";
             }
             else
             {
                 querry = @"INSERT INTO KhachHang(TenKH, DiaChi, SDT, Email, CongNo) VALUES (N'" + customer.TenKH +
-                         "', '" + customer.DiaChi + "', '" + customer.SDT + "', '" +
+                         "', N'" + customer.DiaChi + "', '" + customer.SDT + "', N'" +
                          customer.Email + "'," + customer.CongNo.Id + ")";
             }
             int result = DataProvider.ExecuteNonQuerry(querry);

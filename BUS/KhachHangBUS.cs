@@ -49,5 +49,7 @@ namespace BUS
                 }
             }
         }
+
+        public static KhachHangDTO GetCustomer(string name, string phone) => KhachHangDAO.getCustomer(name, phone);
     }
 }
