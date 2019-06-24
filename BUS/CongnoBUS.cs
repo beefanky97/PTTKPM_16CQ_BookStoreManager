@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DTO;
+using System.Data;
 using DAO;
+using DTO;
 
 namespace BUS
 {
-    public class NguoiDungBUS
+    public class CongnoBUS
     {
-        public static NguoiDungDTO Login(NguoiDungDTO nguoidung) => NguoiDungDAO.Login(nguoidung);
+        public static string addDeb(CongNoDTO congno) => CongNoDAO.addDeb(congno);
     }
 }

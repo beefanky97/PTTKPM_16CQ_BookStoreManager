@@ -10,6 +10,26 @@ namespace DAO
 {
     public class KhachHangDAO
     {
+        public static List<KhachHangDTO> getAll()
+        {
+            string querry = "SELECT KhachHang.Id, TenKH, DiaChi, SDT, Email, CongNo, NoDau, NoCuoi, PhatSinh FROM KhachHang INNER JOIN CongNo ON CongNo.Id = KhachHang.CongNo";
+            DataTable table = DataProvider.ExecuteQuerry(querry);
+            List<KhachHangDTO> list = new List<KhachHangDTO>();
+            for (int i = 0; i < table.Rows.Count; i++)
+            {
+                KhachHangDTO item = new KhachHangDTO();
+                item.Id = table.Rows[i]["Id"].ToString();
+                item.TenKH = table.Rows[i]["TenKH"].ToString();
+                item.SDT = table.Rows[i]["SDT"].ToString();
+                item.Email = table.Rows[i]["Email"].ToString();
+                item.DiaChi = table.Rows[i]["DiaChi"].ToString();
+                item.CongNo.NoDau = table.Rows[i]["NoDau"].ToString();
+                item.CongNo.NoCuoi = table.Rows[i]["NoCuoi"].ToString();
+                item.CongNo.PhatSinh = table.Rows[i]["PhatSinh"].ToString();
+                list.Add(item);
+            }
+            return list;
+        }
         public static int addCustomer(KhachHangDTO customer)
         {
             string querry = "";

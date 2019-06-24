@@ -43,15 +43,46 @@ namespace BookStore_WPF
             if (rbCasher.IsChecked == true)
             {
                 nguoidung.NhanVienBanHang = "1";
+                NguoiDungDTO dangnhap = NguoiDungBUS.Login(nguoidung);
+                if (dangnhap != null)
+                {
+                    Window mainWindow = new MainWindow();
+                    mainWindow.ShowDialog();
+                }
+                else
+                {
+                    txbError.Visibility = Visibility.Visible;
+                }
             }
             if (rbManager.IsChecked == true)
             {
                 nguoidung.QuanLi = "1";
+                NguoiDungDTO dangnhap = NguoiDungBUS.Login(nguoidung);
+                if (dangnhap != null)
+                {
+                    Window reportWindow = new ReportBookWindow();
+                    reportWindow.ShowDialog();
+                }
+                else
+                {
+                    txbError.Visibility = Visibility.Visible;
+                }
             }
             if (rbWarehouse.IsChecked == true)
             {
                 nguoidung.NhanVienNhapKho = "1";
+                NguoiDungDTO dangnhap = NguoiDungBUS.Login(nguoidung);
+                if (dangnhap != null)
+                {
+                    Window addWindow = new AddBook();
+                    addWindow.ShowDialog();
+                }
+                else
+                {
+                    txbError.Visibility = Visibility.Visible;
+                }
             }
+<<<<<<< Updated upstream
             NguoiDungDTO dangnhap = NguoiDungBUS.Login(nguoidung);
             if (dangnhap != null)
             {
@@ -63,6 +94,8 @@ namespace BookStore_WPF
             {
                 txbError.Visibility = Visibility.Visible;
             }
+=======
+>>>>>>> Stashed changes
         }
     }
 }

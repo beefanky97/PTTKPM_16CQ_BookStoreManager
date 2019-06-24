@@ -19,6 +19,6 @@ namespace DTO
         public string IdNo { get => idno; set => idno = value; }
         public string NoDau { get => nodau; set => nodau = value; }
         public string NoCuoi { get => nocuoi; set => nocuoi = value; }
-        public string PhatSing { get => phatsinh; set => phatsinh = value; }
+        public string PhatSinh { get => phatsinh; set => phatsinh = value; }
     }
 }

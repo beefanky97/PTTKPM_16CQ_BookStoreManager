@@ -9,12 +9,14 @@ namespace DAO
 {
     public class CongNoDAO
     {
-        public static int AddDeb(CongNoDTO deb)
+        public static string addDeb(CongNoDTO deb)
         {
             string querry = @"INSERT INTO CongNo (NoDau, NoCuoi, PhatSinh) VALUES (" + deb.NoDau + ", " + deb.NoCuoi +
                             ", " + deb.PhatSinh + ")";
             int result = DataProvider.ExecuteNonQuerry(querry);
-            return result;
+            querry = @"SELECT IDENT_CURRENT('CongNo') AS Id";
+            string id = DataProvider.ExecuteQuerry(querry).Rows[0]["Id"].ToString();
+            return id;
         }
     }
 }

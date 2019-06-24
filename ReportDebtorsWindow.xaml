@@ -43,7 +43,7 @@
             </TextBlock>
             <materialDesign:Card UniformCornerRadius="10"  Width="800" Height="550" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Grid>
-                    <DataGrid Background="AliceBlue" ItemsSource="{Binding Items3}" CanUserSortColumns="True"
+                    <DataGrid Name="dtgReportList" Background="AliceBlue" ItemsSource="{Binding Items3}" CanUserSortColumns="True"
                         CanUserAddRows="False"
                         materialDesign:DataGridAssist.CellPadding="4 2 2 2"
                         materialDesign:DataGridAssist.ColumnHeaderPadding="4 2 2 2" />
@@ -51,7 +51,7 @@
             </materialDesign:Card>
             <StackPanel  Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Center">
                 <Button Background="MediumPurple" Margin="10 40" Width="150" Height="40">In và lưu</Button>
-                <Button Background="LightGreen" Margin="10" Width="150" Height="40">Huỷ</Button>
+                <Button Name="btnCancel" Background="LightGreen" Margin="10" Width="150" Height="40" Click="BtnCancel_Click">Huỷ</Button>
             </StackPanel>
 
         </Grid>

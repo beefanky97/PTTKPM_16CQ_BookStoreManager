@@ -19,8 +19,9 @@ namespace BUS
             }
             else
             {
+                string id = CongNoDAO.addDeb(customer.CongNo);
+                customer.CongNo.Id = id;
                 result = KhachHangDAO.addCustomer(customer);
-                result = CongNoDAO.AddDeb(customer.CongNo);
             }
             return result;
         }
@@ -33,6 +34,10 @@ namespace BUS
             }
             else
             {
+                if (customer.CongNo == null)
+                {
+                    return 3;
+                }
                 int nodau = int.Parse(customer.CongNo.NoDau);
                 if (nodau < 20000)
                 {

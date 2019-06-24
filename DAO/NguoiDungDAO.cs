@@ -14,7 +14,7 @@ namespace DAO
         {
             string querry = "SELECT * FROM NguoiDung " +
                 "WHERE TenDangNhap='" + nguoidung.TenDangNhap + "' AND MatKhau='" + nguoidung.MatKhau + "' AND QuanLi=" + nguoidung.QuanLi
-                + " AND NhanVienNhapKho=" + nguoidung.NhanVienNhapKho + " AND NhanVienBanhang=" + nguoidung.NhanVienBanHang;
+                + " AND NhanVienNhapKho=" + nguoidung.NhanVienNhapKho + " AND NhanVienBanhang=" + nguoidung.NhanVienBanHang + "AND DaXoa=0";
             DataTable result = DataProvider.ExecuteQuerry(querry);
             NguoiDungDTO dangnhap = new NguoiDungDTO();
             if (result.Rows.Count == 0)
